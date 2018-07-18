@@ -1,4 +1,4 @@
-# .Net-
+### webapi接口返回值： IHttpActionResult HttpResponseMessage 与 自定义类型 
 ```
         /// <summary>
         /// 测试返回类型的接口  返回类型为 ： Json<T>(T content)
