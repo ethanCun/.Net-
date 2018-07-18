@@ -190,3 +190,29 @@
             return new RequestResult(res, Request);
         }
 ```
+
+#### 自定义的webApi接口返回值：
+```
+    public class RequestResult : IHttpActionResult
+    {
+        object _value;
+        HttpRequestMessage _request;
+
+        public RequestResult(object value, HttpRequestMessage request)
+        {
+            _value = value;
+            _request = request;
+        }
+
+        public Task<HttpResponseMessage> ExecuteAsync(CancellationToken cancellationToken)
+        {
+            var response = new HttpResponseMessage() {
+
+                Content = new ObjectContent(typeof(object), _value, new JsonMediaTypeFormatter()),
+                RequestMessage = _request
+            };
+
+            return Task.FromResult(response);
+        }
+    }
+```
