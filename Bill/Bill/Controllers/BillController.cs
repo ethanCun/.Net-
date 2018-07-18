@@ -12,7 +12,12 @@ using System.Web.Http.Results;
 
 using Bill.Models;
 using Bill.Interface;
+
+//数据库
 using System.Data.SqlClient;
+
+//引入工具
+using Bill.Tools;
 
 namespace 对账单数据模型.Controllers
 {
@@ -180,6 +185,22 @@ namespace 对账单数据模型.Controllers
             res.Add("data", data);
 
             return Content<Dictionary<string, object>>(HttpStatusCode.OK, res);
+        }
+
+        public IHttpActionResult CustomContent()
+        {
+            var lstRes = new List<object>();
+
+            //实际项目中，通过后台取到集合赋值给lstRes变量。这里只是测试。
+            lstRes.Add("string1");
+            lstRes.Add("string2");
+
+            Dictionary<string, object> res = new Dictionary<string, object>();
+            res.Add("code", 0);
+            res.Add("message", "success");
+            res.Add("data", lstRes);
+
+            return new RequestResult(res, Request);
         }
     }
 }
