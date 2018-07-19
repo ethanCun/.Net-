@@ -1,4 +1,4 @@
-### webapi接口返回值： IHttpActionResult HttpResponseMessage 与 自定义类型 
+﻿### webapi接口返回值： IHttpActionResult HttpResponseMessage 与 自定义类型 
 ```
         /// <summary>
         /// 测试返回类型的接口  返回类型为 ： Json<T>(T content)
@@ -215,4 +215,27 @@
             return Task.FromResult(response);
         }
     }
+```
+
+```
+        /// <summary>
+        /// HttpResponseMessaage返回类型
+        /// </summary>
+        /// <returns></returns>
+        public IHttpActionResult ReturnHttpResponseMessage()
+        {
+            return Content<string>(HttpStatusCode.OK, "HttpResponseMessage 一般用来返回 HttpResponse 对象， 例如到处excel文件流");
+        }
+
+```
+
+```
+        /// <summary>
+        /// 完全自定义的返回类型 这种方式返回的结果和IHttpActionResult一致，直接返回200；
+        /// 但是不会在后台前端api列表里面显示返回数据的格式层次 因此不推荐使用
+        /// </summary>
+        public object customReturnData()
+        {
+            return new Dictionary<string, object>{ { "code",0 }, { "message", "success" }, { "data", new List<string> { "s1", "s2" } } };
+        }
 ```

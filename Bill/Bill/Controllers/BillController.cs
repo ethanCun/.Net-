@@ -187,6 +187,10 @@ namespace 对账单数据模型.Controllers
             return Content<Dictionary<string, object>>(HttpStatusCode.OK, res);
         }
 
+        /// <summary>
+        /// 自定义IHttpActionResult类型的返回类型
+        /// </summary>
+        /// <returns></returns>
         public IHttpActionResult CustomContent()
         {
             var lstRes = new List<object>();
@@ -201,6 +205,23 @@ namespace 对账单数据模型.Controllers
             res.Add("data", lstRes);
 
             return new RequestResult(res, Request);
+        }
+
+        /// <summary>
+        /// HttpResponseMessaage返回类型
+        /// </summary>
+        /// <returns></returns>
+        public IHttpActionResult ReturnHttpResponseMessage()
+        {
+            return Content<string>(HttpStatusCode.OK, "HttpResponseMessage 一般用来返回 HttpResponse 对象， 例如到处excel文件流");
+        }
+
+        /// <summary>
+        /// 完全自定义的返回类型
+        /// </summary>
+        public object customReturnData()
+        {
+            return new Dictionary<string, object>{ { "code",0 }, { "message", "success" }, { "data", new List<string> { "s1", "s2" } } };
         }
     }
 }

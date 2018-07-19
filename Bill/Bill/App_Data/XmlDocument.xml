@@ -656,5 +656,22 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:对账单数据模型.Controllers.BillController.CustomContent">
+            <summary>
+            自定义IHttpActionResult类型的返回类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:对账单数据模型.Controllers.BillController.ReturnHttpResponseMessage">
+            <summary>
+            HttpResponseMessaage返回类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:对账单数据模型.Controllers.BillController.customReturnData">
+            <summary>
+            完全自定义的返回类型
+            </summary>
+        </member>
     </members>
 </doc>
