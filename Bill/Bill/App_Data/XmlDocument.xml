@@ -599,6 +599,15 @@
             <returns></returns>
             
         </member>
+        <member name="M:对账单数据模型.Controllers.BillController.GetBills2(System.String,System.String,System.String)">
+            <summary>
+            返回模型  会在后台前端显示数据层次
+            </summary>
+            <param name="gscode"></param>
+            <param name="year"></param>
+            <param name="month"></param>
+            <returns></returns>
+        </member>
         <!-- Badly formed XML comment ignored for member "M:对账单数据模型.Controllers.BillController.SayWithIHttpActionResult" -->
         <member name="M:对账单数据模型.Controllers.BillController.sayWithVoid">
             <summary>
@@ -670,7 +679,8 @@
         </member>
         <member name="M:对账单数据模型.Controllers.BillController.customReturnData">
             <summary>
-            完全自定义的返回类型
+            完全自定义的返回类型 这种方式返回的结果和IHttpActionResult一致，直接返回200；
+            但是不会在后台前端api列表里面显示返回数据的格式层次 因此不推荐使用
             </summary>
         </member>
     </members>

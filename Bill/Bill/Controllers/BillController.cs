@@ -41,6 +41,19 @@ namespace 对账单数据模型.Controllers
         }
 
         /// <summary>
+        /// 返回模型  会在后台前端显示数据层次
+        /// </summary>
+        /// <param name="gscode"></param>
+        /// <param name="year"></param>
+        /// <param name="month"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public CheckBill GetBills2(string gscode, string year, string month)
+        {
+            return blo.GetBills(gscode, year, month);
+        }
+
+        /// <summary>
         /// 测试返回类型的接口  返回类型为 ： Json<T>(T content)
         /// </summary>
         /// <returns></returns>
@@ -217,7 +230,8 @@ namespace 对账单数据模型.Controllers
         }
 
         /// <summary>
-        /// 完全自定义的返回类型
+        /// 完全自定义的返回类型 这种方式返回的结果和IHttpActionResult一致，直接返回200；
+        /// 但是不会在后台前端api列表里面显示返回数据的格式层次 因此不推荐使用
         /// </summary>
         public object customReturnData()
         {
