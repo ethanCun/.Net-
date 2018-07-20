@@ -392,3 +392,34 @@
             return Content<Dictionary<string, object>>(HttpStatusCode.OK, result);
         }
 ```
+
+```
+        /// <summary>
+        /// 获取班级以及对应学生的所有数据
+        /// </summary>
+        /// 
+        [HttpPost]
+        public IList<Class> GetAllClasses()
+        {
+            Sql classSql = Sql.Builder.Select("*").From("t_class");
+
+            IList<Class> classes = db.Query<Class>(classSql).ToList();
+
+            Sql studentSql = Sql.Builder.Select("*").From("t_student");
+
+            IList<Student> students = db.Query<Student>(studentSql).ToList();
+
+            foreach(Student stu in students)
+            {
+                foreach(Class cls in classes)
+                {
+                    if(cls.ClassName == stu.Class)
+                    {
+                        cls.students.Add(stu);
+                    }
+                }
+            }
+
+            return classes;
+        }
+```
