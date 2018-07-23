@@ -515,37 +515,41 @@ ApiControllerr:
 
 ### 多层数组结构的处理
 ```
-        public Biology  GetBiology(string BiologyName)
+       public Biology  GetBiology(string BiologyName)
         {
+            if(BiologyName == null || BiologyName == "" || BiologyName == "{BiologyName}")
+            {
+                return null;
+            }
+
             //获取该种生物的信息
             Biology biology = db.SingleOrDefault<Biology>(Sql.Builder.Select("*").From("t_biology").Where("BiologyName=@0", BiologyName));
 
             //获取所有的动物或植物
             List<Animal> animals = db.Fetch<Animal>(Sql.Builder.Select("*").From("t_animal"));
 
-            //获取所有的生物信息
-            //Query与Fetch的区别：获取数据的时机不同 其次返回的数据格式不同
-           List<AnimalInfo> animalInfos = db.Fetch<AnimalInfo>(Sql.Builder.Select("*").From("t_animalInfo"));
 
             foreach (Animal animal in animals)
             {
+                //获取所有的生物信息
+                List<AnimalInfo> animalInfos = db.Fetch<AnimalInfo>(Sql.Builder.Select("*").From("t_animalInfo").Where("Animal=@0", animal.AnimalName));
+
+                animal.AnimalInfos = animalInfos;
+
                 //先根据animal的名称 将不同的animal信息放入animalInfo's中
-                foreach (AnimalInfo animalInfo in animalInfos)
-                {
-                    if (animalInfo.Animal == animal.AnimalName)
-                    {
-                        //将同样类型的添加进去
-                        animal.AnimalInfos.Add(animalInfo);
-                    }
-                }
+                //foreach (AnimalInfo animalInfo in animalInfos)
+                //{
+
+                //    if (animalInfo.Animal == animal.AnimalName)
+                //    {
+                //        //将同样类型的添加进去
+                //        animal.AnimalInfos.Add(animalInfo);
+                //    }
+                //}
 
                 if (animal.Biology == biology.BiologyName)
                 {
                     biology.Animals.Add(animal);
                 }
             }
-            
-
-            return biology;
-        }
 ```
