@@ -423,3 +423,60 @@
             return classes;
         }
 ```
+
+### PetaPoco分页获取信息Web.config
+```
+    <add name="cls" providerName="System.Data.SqlClient" connectionString="Server=127.0.0.1;database=cls;uid=sa;pwd=sa" />
+```
+```
+Models:
+    public class Students
+    {
+        public long CurrentPage { get; set; }
+        public long TotalPages { get; set; }
+        public long TotalItems { get; set; }
+        public List<Student> students = new List<Student>();
+    }
+
+    [PetaPoco.TableName("t_student")]
+    [PetaPoco.PrimaryKey("Id")]
+    public class Student
+    {
+        [PetaPoco.Ignore]
+        public int Id { get; set; }
+        public string StudentName { get; set; }
+        public string StudentHeight { get; set; }
+        public string StudentWeight { get; set; }
+    }
+```
+
+```
+ApiControllerr:
+        private Database db = new Database("cls");
+
+        /// <summary>
+        /// 分页获取学生信息
+        /// </summary>
+        /// <param name="currentPage"></param>
+        /// <param name="numsPerPage"></param>
+        /// <returns></returns>
+        /// 
+        [HttpPost]
+        public Students GetInfoByPage(int currentPage, int numsPerPage)
+        {
+            Page<Student> result = db.Page<Student>(currentPage, numsPerPage, "select * from t_student order by StudentName asc");
+
+            Students students = new Students();
+
+            foreach(Student stu in result.Items)
+            {
+                students.students.Add(stu);
+            }
+
+            students.CurrentPage = result.CurrentPage;
+            students.TotalPages = result.TotalPages;
+            students.TotalItems = result.TotalItems;
+
+            return students;
+        }
+```
