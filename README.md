@@ -480,3 +480,72 @@ ApiControllerr:
             return students;
         }
 ```
+```
+        /// <summary>
+        /// 获取header中的值
+        /// </summary>
+        /// <param name="request"></param>
+        /// <param name="key"></param>
+        /// <returns></returns>
+        /// 
+        [HttpPost]
+        public string GetHeaders1(HttpRequestMessage request, string key)
+        {
+            IEnumerable<string> keys = null;
+            if (!request.Headers.TryGetValues(key, out keys))
+                return null;
+
+            return keys.First();
+        }
+```
+```
+        /// <summary>
+        /// 获取请求方式
+        /// </summary>
+        /// <param name="message"></param>
+        /// <param name="key"></param>
+        /// <returns></returns>
+        /// 
+        //[HttpPost]
+        public string GetMethod11()
+        {
+            return Request.Method.ToString();
+        }
+```
+
+### 多层数组结构的处理
+```
+        public Biology  GetBiology(string BiologyName)
+        {
+            //获取该种生物的信息
+            Biology biology = db.SingleOrDefault<Biology>(Sql.Builder.Select("*").From("t_biology").Where("BiologyName=@0", BiologyName));
+
+            //获取所有的动物或植物
+            List<Animal> animals = db.Fetch<Animal>(Sql.Builder.Select("*").From("t_animal"));
+
+            //获取所有的生物信息
+            //Query与Fetch的区别：获取数据的时机不同 其次返回的数据格式不同
+           List<AnimalInfo> animalInfos = db.Fetch<AnimalInfo>(Sql.Builder.Select("*").From("t_animalInfo"));
+
+            foreach (Animal animal in animals)
+            {
+                //先根据animal的名称 将不同的animal信息放入animalInfo's中
+                foreach (AnimalInfo animalInfo in animalInfos)
+                {
+                    if (animalInfo.Animal == animal.AnimalName)
+                    {
+                        //将同样类型的添加进去
+                        animal.AnimalInfos.Add(animalInfo);
+                    }
+                }
+
+                if (animal.Biology == biology.BiologyName)
+                {
+                    biology.Animals.Add(animal);
+                }
+            }
+            
+
+            return biology;
+        }
+```
