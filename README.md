@@ -1025,3 +1025,42 @@ using Newtonsoft.Json.Converters;
             return nnow;
         }
 ```
+### 插入或者更新一条信息： 表中存在该信息 则更新（先删除原来存在的  再插入新的数据） 表中不存在该数据 则添加
+```
+        private Database db = new Database("Names");
+
+        /// <summary>
+        /// 插入或者更新表
+        /// Name存在则更新Age的信息 Name不存在则添加一条person的信息
+        /// </summary>
+        /// <returns></returns>
+        public List<Person> InsertOrUpdateTable(Person person)
+        {
+            //如果存在该名字的person信息 则删除然后重新添加新的Age信息
+            //如果不存在 则直接添加一条新的信息
+            /*
+            if exists(select * from t_Names where Name='sss')
+             begin 
+             delete from t_Names where Name='sss'
+             end 
+             insert into t_Names (Name, Age) values('sss','111')
+            */
+            string sql = @"if exists(select * from t_Names where Name="
+                        + "'" 
+                        + person.Name
+                        + "'" 
+                        + ") begin delete from t_Names where Name=" 
+                        + "'"
+                        + person.Name + 
+                        "'" 
+                        + " end insert into t_Names (Name, Age) values(" 
+                        + "'" 
+                        + person.Name + "'," + "'" + person.Age + "'" + ")";
+
+             int res = db.Execute(Sql.Builder.Append(sql));
+
+            List<Person> names = db.Fetch<Person>(Sql.Builder.Append("select * from t_Names"));
+
+            return names;
+        }
+```
