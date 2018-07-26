@@ -1112,3 +1112,78 @@ select @@MAX_CONNECTIONS
 --返回最近一次插入的编号
 select @@IDENTITY
 ```
+### Nlog日志记录 
+##### 在项目NuGet程序包中搜索NLog并安装
+```
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  
+  <!--
+  在<nlog />节点中，有五个子节点可让我们配置，前两个节点是配置必须的，而后面的几个是可选，
+  可用于更高级的场景:
+  
+  <targets /> –定义日志记录输出的目标位置，可以配置为输出到控制台，文件，数据库，事件日志等等
+  <rules /> –定义日志输出路径规则
+  <extensions /> –定义从某个*.dll获取Nlog扩展
+  <include />– 包含外部的配置文件
+  <variable /> – 设置配置变量的值
+  -->
+  <!--
+  1.autoReload="true"表示在不重新启动应用程序的情况下，修改配置文件，NLog会自动加载应用
+  
+  2.internalLogLevel="Trace"internalLogFile="logs/internalLog.txt"这个设置可以将NLog内部的
+  日志消息写到应用程序目录下的logs文件夹里的internalLog.txt文件中；（这个配置常用于调试Nlog
+  的配置是否正确，调试完成后，最好关闭以提高性能）
+  
+  3. <target>的配置：type="File|Console" 属性是设置日志输出目标是"File"(文件)或者"Console"（控制台）；
+  type="File"的时候要指定fileName属性， fileName="${basedir}/logs/${shortdate}.log" 设置日记
+  记录文件的路径和名称，即应用程序下的log目录里格式为yyyy-MM-DD.log；
+  layout="${date:format=yyyyMMddHHmmss} ${callsite} ${level} ${message}" 
+  设置日志输出格式(可查阅官网说明).
+  
+  4.name="NLogConsoleExample"表示配置的规则适用于Logger名称为“NLogConsoleExample”，
+  如果填*，则表示所有的Logger都运用这个规则。
+  
+  5.minlevel="Debug"maxlevel="Error"用来配置记录的级别为最小是"Debug"最大为"Error"
+  (备注：此处也可以用levels="Debug,Error"来设置，说明只输出Debug级别以及Error级别的日志
+  
+  6. writeTo="t1,t2"其中t1,t2分别代表上面设置的targets名称为t1以及t2的目标输出，
+  此处表示将分别将日志信息输出到文件和控制台。
+  -->
+  
+  <configSections>
+    <section name="nlog" type="NLog.Config.ConfigSectionHandler, NLog"/>
+  </configSections>
+  
+  <nlog autoReload="true" internalLogLevel="Trace" internalLogFile="logs/internalLog.txt">
+    <targets>
+      <target name="t1" type="File" fileName="${basedir}/logs/${shortdate}.log"
+      layout="${longdate} ${callsite} ${level}:
+      ${message} ${event-context:item=exception} ${stacktrace} ${event-context:item=stacktrace}"/>
+      <target name="t2" type="Console" layout="${date:format=yyyyMMddHHmmss} ${callsite} ${level} ${message}"/>
+    </targets>
+    <rules>
+      <logger name="NLogConsoleExample" minlevel="Trace" maxlevel="Fatal" writeTo="t1,t2" />
+    </rules>
+  </nlog>
+  
+  
+    <startup> 
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5.2" />
+    </startup>
+</configuration>
+```
+```
+使用：
+        private static readonly Logger logger = LogManager.GetLogger("NLogConsoleExample");
+        static void Main(string[] args)
+        {
+            logger.Trace("trace");
+            logger.Debug("debug");
+            logger.Info("info");
+            logger.Error("error");
+            logger.Fatal("fatal");
+
+            Console.Read();
+        }
+```
