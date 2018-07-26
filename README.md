@@ -1114,6 +1114,7 @@ select @@IDENTITY
 ```
 ### Nlog日志记录 
 ##### 在项目NuGet程序包中搜索NLog并安装
+#### App.config/Web.config配置
 ```
 <?xml version="1.0" encoding="utf-8" ?>
 <configuration>
