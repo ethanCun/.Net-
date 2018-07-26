@@ -1,0 +1,32 @@
+2018-07-26 15:12:58.7487 NLogTest.Controllers.HomeController.Index Trace:
+homeController ¸ú×Ù  ActionMethodDispatcher.Execute => <no type>.lambda_method => HomeController.Index 
+2018-07-26 15:12:58.8042 NLogTest.Controllers.HomeController.Index Fatal:
+homeController ÖÂÃü´íÎó  ActionMethodDispatcher.Execute => <no type>.lambda_method => HomeController.Index 
+2018-07-26 15:15:13.3792 NLogTest.Controllers.HomeController.Index Trace:
+homeController ¸ú×Ù  ActionMethodDispatcher.Execute => <no type>.lambda_method => HomeController.Index 
+2018-07-26 15:15:13.3792 NLogTest.Controllers.HomeController.Index Fatal:
+homeController ÖÂÃü´íÎó  ActionMethodDispatcher.Execute => <no type>.lambda_method => HomeController.Index 
+2018-07-26 15:16:58.2525 NLogTest.Controllers.HomeController.Index Trace:
+homeController ¸ú×Ù  ActionMethodDispatcher.Execute => <no type>.lambda_method => HomeController.Index 
+2018-07-26 15:16:58.2965 NLogTest.Controllers.HomeController.Index Fatal:
+homeController ÖÂÃü´íÎó  ActionMethodDispatcher.Execute => <no type>.lambda_method => HomeController.Index 
+2018-07-26 15:17:53.6695 NLogTest.Controllers.HomeController.Index Trace:
+homeController ¸ú×Ù  ActionMethodDispatcher.Execute => <no type>.lambda_method => HomeController.Index 
+2018-07-26 15:17:53.7095 NLogTest.Controllers.HomeController.Index Fatal:
+homeController ÖÂÃü´íÎó  ActionMethodDispatcher.Execute => <no type>.lambda_method => HomeController.Index 
+2018-07-26 15:18:09.9562 NLogTest.Controllers.NLogController.TestLogger Trace:
+NLogController ¸ú×Ù  <>c__DisplayClass10.<GetExecutor>b__9 => <no type>.lambda_method => NLogController.TestLogger 
+2018-07-26 15:18:09.9562 NLogTest.Controllers.NLogController.TestLogger Debug:
+NLogController  µ÷ÊÔ  <>c__DisplayClass10.<GetExecutor>b__9 => <no type>.lambda_method => NLogController.TestLogger 
+2018-07-26 15:18:09.9562 NLogTest.Controllers.NLogController.TestLogger Info:
+NLogController ÐÅÏ¢  <>c__DisplayClass10.<GetExecutor>b__9 => <no type>.lambda_method => NLogController.TestLogger 
+2018-07-26 15:18:09.9641 NLogTest.Controllers.NLogController.TestLogger Error:
+NLogController ´íÎó  <>c__DisplayClass10.<GetExecutor>b__9 => <no type>.lambda_method => NLogController.TestLogger 
+2018-07-26 15:18:09.9641 NLogTest.Controllers.NLogController.TestLogger Fatal:
+NLogController ÖÂÃü´íÎó  <>c__DisplayClass10.<GetExecutor>b__9 => <no type>.lambda_method => NLogController.TestLogger 
+2018-07-26 15:20:30.0608 NLogTest.Controllers.HomeController.Index Trace:
+homeController ¸ú×Ù  ActionMethodDispatcher.Execute => <no type>.lambda_method => HomeController.Index 
+2018-07-26 15:20:30.1113 NLogTest.Controllers.HomeController.Index Fatal:
+homeController ÖÂÃü´íÎó  ActionMethodDispatcher.Execute => <no type>.lambda_method => HomeController.Index 
+2018-07-26 15:21:14.6681 NLogTest.Controllers.NLogController.SaySomething Debug:
+¡¤12123123  <>c__DisplayClass10.<GetExecutor>b__9 => <no type>.lambda_method => NLogController.SaySomething 
