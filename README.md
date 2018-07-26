@@ -1,4 +1,16 @@
-﻿### webapi接口返回值： IHttpActionResult HttpResponseMessage 与 自定义类型 
+﻿### 为webapi添加接口注释和测试功能
+```
+接口注释参考链接： https://blog.csdn.net/a123_z/article/details/71078062
+测试功能：NuGet添加WebApiTestClient，需在 Areas\HelpPage\Views\Help\Api.cshtml文件最后面添加：
+	
+@Html.DisplayForModel("TestClientDialogs")
+@section Scripts {
+    <linktype ="text/css" href="~/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+    @Html.DisplayForModel("TestClientReferences")
+}
+```
+
+### webapi接口返回值： IHttpActionResult HttpResponseMessage 与 自定义类型 
 ```
         /// <summary>
         /// 测试返回类型的接口  返回类型为 ： Json<T>(T content)
