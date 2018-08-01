@@ -1255,20 +1255,20 @@ select @@IDENTITY
         //发起命令 > SuperSocket处理解析 > 触发Session内部事件 > 触发ExecuteCommand事件 
         //> 自定义命令解析处理 > 触发Send事件返回服务器处理数据
          // 注意设置为public权限
-namespace SuperSocketDemo.Commands
-{
-    public class ADD : CommandBase<TestSession, StringRequestInfo>
-   
- {
-       
-  public override void ExecuteCommand(TestSession session, StringRequestInfo requestInfo)
-  
+       namespace SuperSocketDemo.Commands
+
       {
+   
+	 public class ADD : CommandBase<TestSession, StringRequestInfo>
+   
+	 {
+       
+          		 public override void ExecuteCommand(TestSession session, StringRequestInfo requestInfo)
+  
+      	{
            
  	session.Send(requestInfo.Parameters.Select(p => Convert.ToDouble(p)).Sum().ToString());
       
       }
   
-  }
-}
 ```
