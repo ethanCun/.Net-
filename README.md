@@ -1200,3 +1200,75 @@ select @@IDENTITY
             Console.Read();
         }
 ```
+### SuperSocket使用：文档：http://docs.supersocket.net/v1-6/zh-CN
+```
+    /*
+        注意事项：
+        
+        a) MyServer、自定义命令和MySession的访问权限必须设置为public
+
+        b) MyServer父类为AppServer<MySession>
+
+        c) MySession父类为AppSession<MySession>
+
+        d) HELLO父类为CommandBase<MySession,StringRequestInfo>，
+        ExecueteCommand方法传入值类型分别为MySession和StringRequestInfo
+
+        e) 多服务器中需注意AppSession、AppServer、自定义命令中的AppSession不要搞错
+
+        AppSession 代表一个和客户端的逻辑连接，基于连接的操作应该定于在该类之中。
+        你可以用该类的实例发送数据到客户端，接收客户端发送的数据或者关闭连接。
+
+        AppServer 代表了监听客户端连接，承载TCP连接的服务器实例。
+        理想情况下，我们可以通过AppServer实例获取任何你想要的客户端连接，
+        服务器级别的操作和逻辑应该定义在此类之中。
+
+        命令行协议是一种被广泛应用的协议。一些成熟的协议如 Telnet, SMTP, POP3 和 FTP 都是基于命令行协议的。
+        在SuperSocket 中， 如果你没有定义自己的协议，SuperSocket 将会使用命令行协议, 这会使这样的协议的开发变得很简单。
+        命令行协议定义了每个请求必须以回车换行结尾 "\r\n"。
+
+        如果你在 SuperSocket 中使用命令行协议，所有接收到的数据将会翻译成 StringRequestInfo 实例.
+
+        SuperSocket 中内置的命令行协议用空格来分割请求的Key和参:
+        因此当客户端发送如下数据到服务器端时: "LOGIN kerry 123456" + NewLine
+        SuperSocket 服务器将会收到一个 StringRequestInfo 实例，这个实例的属性为:
+
+        Key: "LOGIN"
+        Body: "kerry 123456";
+        Parameters: ["kerry", "123456"]
+
+        如果你定义了名为 "LOGIN" 的命令, 这个命令的 ExecuteCommand 方法将会被执行，
+        服务器所接收到的StringRequestInfo实例也将作为参数传给这个方法:
+
+        public class LOGIN : CommandBase<AppSession, StringRequestInfo>
+        {
+            public override void ExecuteCommand(AppSession session, StringRequestInfo requestInfo)
+            {
+                //Implement your business logic
+            }
+        }
+        */
+
+```
+```
+       //Commad处理自定义指令过程
+        //发起命令 > SuperSocket处理解析 > 触发Session内部事件 > 触发ExecuteCommand事件 
+        //> 自定义命令解析处理 > 触发Send事件返回服务器处理数据
+         // 注意设置为public权限
+namespace SuperSocketDemo.Commands
+{
+    public class ADD : CommandBase<TestSession, StringRequestInfo>
+   
+ {
+       
+  public override void ExecuteCommand(TestSession session, StringRequestInfo requestInfo)
+  
+      {
+           
+ 	session.Send(requestInfo.Parameters.Select(p => Convert.ToDouble(p)).Sum().ToString());
+      
+      }
+  
+  }
+}
+```

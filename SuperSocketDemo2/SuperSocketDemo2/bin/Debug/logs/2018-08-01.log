@@ -1,0 +1,906 @@
+2018-08-01 08:15:38.7077 SuperSocketDemo2.Program.Main Debug:
+      服务器启动成功  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 08:15:42.1032 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-08-01 08:15:42.1572 SuperSocketDemo2.SuperSocket.TestSession.OnSessionStarted Debug:
+      OnSessionStarted  SocketSession.StartSession => AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted 
+2018-08-01 08:15:56.0657 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      key = TestCommand, para = System.String[], body = 1 1  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-08-01 08:18:04.2881 SuperSocketDemo2.Program.Main Debug:
+      服务器启动成功  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 08:18:11.7486 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-08-01 08:18:11.7811 SuperSocketDemo2.SuperSocket.TestSession.OnSessionStarted Debug:
+      OnSessionStarted  SocketSession.StartSession => AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted 
+2018-08-01 08:18:24.0061 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      key = 111, para = System.String[], body = 1 1 111  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-08-01 08:18:34.5495 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      key = 1, para = System.String[], body = 1  1  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-08-01 08:18:52.7338 SuperSocketDemo2.Program.Main Debug:
+      服务器启动成功  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 08:18:56.2014 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-08-01 08:18:56.2352 SuperSocketDemo2.SuperSocket.TestSession.OnSessionStarted Debug:
+      OnSessionStarted  SocketSession.StartSession => AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted 
+2018-08-01 08:18:59.7605 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      key = 1, para = System.String[], body = 1 1  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-08-01 08:23:17.1909 SuperSocketDemo2.Program.Main Debug:
+      服务器启动成功  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 08:23:21.0105 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-08-01 08:23:21.0445 SuperSocketDemo2.SuperSocket.TestSession.OnSessionStarted Debug:
+      OnSessionStarted  SocketSession.StartSession => AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted 
+2018-08-01 08:23:25.5321 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      message = Unknown request: 1  TestSession.HandleUnknownRequest => AppSession`1.HandleUnknownRequest => TestSession.Send 
+2018-08-01 08:23:25.5321 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      key = 1, para = System.String[], body =  1 1  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-08-01 08:23:25.5321 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      message = 接收到了数据 1 1  AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest => TestSession.Send 
+2018-08-01 08:25:03.9985 SuperSocketDemo2.Program.Main Debug:
+      服务器启动成功  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 08:25:05.5184 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-08-01 08:25:05.5624 SuperSocketDemo2.SuperSocket.TestSession.OnSessionStarted Debug:
+      OnSessionStarted  SocketSession.StartSession => AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted 
+2018-08-01 08:25:09.3551 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = Unknown request: 1  TestSession.HandleUnknownRequest => AppSession`1.HandleUnknownRequest => TestSession.Send 
+2018-08-01 08:25:09.3611 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      key = 1, para = System.String[], body = 1  1  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-08-01 08:25:39.6451 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = Unknown request: TestCommand  TestSession.HandleUnknownRequest => AppSession`1.HandleUnknownRequest => TestSession.Send 
+2018-08-01 08:25:39.6451 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      key = TestCommand, para = System.String[], body = 11 12TestCommand 11 12  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-08-01 08:26:08.3020 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = Unknown request: TestCommand  TestSession.HandleUnknownRequest => AppSession`1.HandleUnknownRequest => TestSession.Send 
+2018-08-01 08:26:08.3020 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      key = TestCommand, para = System.String[], body = 11 12  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-08-01 08:31:09.3206 SuperSocketDemo2.Program.Main Debug:
+      服务器启动成功  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 08:31:15.1002 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-08-01 08:31:15.1347 SuperSocketDemo2.SuperSocket.TestSession.OnSessionStarted Debug:
+      Welcome to SuperSocket Telnet Server  SocketSession.StartSession => AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted 
+2018-08-01 08:31:32.5798 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = Unknown request: 1  TestSession.HandleUnknownRequest => AppSession`1.HandleUnknownRequest => TestSession.Send 
+2018-08-01 08:31:59.1588 SuperSocketDemo2.Program.Main Debug:
+      服务器启动成功  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 08:32:01.6303 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-08-01 08:32:01.6668 SuperSocketDemo2.SuperSocket.TestSession.OnSessionStarted Debug:
+      Welcome to SuperSocket Telnet Server  SocketSession.StartSession => AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted 
+2018-08-01 08:32:05.8702 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = Unknown request: 1  TestSession.HandleUnknownRequest => AppSession`1.HandleUnknownRequest => TestSession.Send 
+2018-08-01 08:32:05.8767 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      接收到客户端数据为：key = 1, para = System.String[], body = 1 1  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-08-01 08:43:25.8627 SuperSocketDemo2.Program.Main Debug:
+      服务器启动成功  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 08:43:33.1793 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-08-01 08:43:39.7478 SuperSocketDemo2.Program.Main Debug:
+      服务器启动成功  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 08:43:49.0111 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-08-01 08:43:49.0476 SuperSocketDemo2.SuperSocket.TestSession.OnSessionStarted Debug:
+      Welcome to SuperSocket Telnet Server  SocketSession.StartSession => AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted 
+2018-08-01 08:43:58.0375 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = Unknown request: 2  TestSession.HandleUnknownRequest => AppSession`1.HandleUnknownRequest => TestSession.Send 
+2018-08-01 08:43:58.0445 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      接收到客户端数据为：key = 2, para = System.String[], body = 2 2  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-08-01 08:44:56.1414 SuperSocketDemo2.Program.Main Debug:
+      服务器启动成功  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 08:45:03.9009 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-08-01 08:45:03.9359 SuperSocketDemo2.SuperSocket.TestSession.OnSessionStarted Debug:
+      Welcome to SuperSocket Telnet Server  SocketSession.StartSession => AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted 
+2018-08-01 08:45:03.9659 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = Welcome to SuperSocket Telnet Server  AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted => TestSession.Send 
+2018-08-01 08:45:03.9659 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = Unknown request: 1  TestSession.HandleUnknownRequest => AppSession`1.HandleUnknownRequest => TestSession.Send 
+2018-08-01 08:45:03.9659 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      接收到客户端数据为：key = 1, para = System.String[], body = 1 1  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-08-01 08:45:10.9256 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = Unknown request: 1  TestSession.HandleUnknownRequest => AppSession`1.HandleUnknownRequest => TestSession.Send 
+2018-08-01 08:45:10.9256 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      接收到客户端数据为：key = 1, para = System.String[], body = 1 1  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-08-01 08:45:20.2780 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = Unknown request: 1  TestSession.HandleUnknownRequest => AppSession`1.HandleUnknownRequest => TestSession.Send 
+2018-08-01 08:45:20.2780 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      接收到客户端数据为：key = 1, para = System.String[], body = 1 1  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-08-01 08:46:03.3964 SuperSocketDemo2.Program.Main Debug:
+      服务器启动成功  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 08:46:06.3549 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-08-01 08:46:06.3654 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = init success  AppSession`2.Initialize => TestSession.OnInit => TestSession.Send 
+2018-08-01 08:46:06.4159 SuperSocketDemo2.SuperSocket.TestSession.OnSessionStarted Debug:
+      Welcome to SuperSocket Telnet Server  SocketSession.StartSession => AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted 
+2018-08-01 08:46:06.4159 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = Welcome to SuperSocket Telnet Server  AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted => TestSession.Send 
+2018-08-01 08:46:13.3983 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = Unknown request: 1  TestSession.HandleUnknownRequest => AppSession`1.HandleUnknownRequest => TestSession.Send 
+2018-08-01 08:46:13.3983 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      接收到客户端数据为：key = 1, para = System.String[], body = 1 1  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-08-01 08:50:08.7119 SuperSocketDemo2.Program.Main Debug:
+      服务器启动成功  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 08:50:17.6833 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-08-01 08:50:17.6838 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 初始化AppSession成功  AppSession`2.Initialize => TestSession.OnInit => TestSession.Send 
+2018-08-01 08:50:17.7358 SuperSocketDemo2.SuperSocket.TestSession.OnSessionStarted Debug:
+      Welcome to SuperSocket Telnet Server  SocketSession.StartSession => AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted 
+2018-08-01 08:50:17.7358 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 连接建立  AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted => TestSession.Send 
+2018-08-01 08:50:17.7473 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = Unknown request: 1  TestSession.HandleUnknownRequest => AppSession`1.HandleUnknownRequest => TestSession.Send 
+2018-08-01 08:50:17.7473 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      接收到客户端数据为：key = 1, para = System.String[], body = 1 1  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-08-01 08:50:32.1311 SuperSocketDemo2.SuperSocket.TestSession.OnSessionClosed Debug:
+      OnSessionClosed  AppServer`2.OnSessionClosed => AppServerBase`2.OnSessionClosed => TestSession.OnSessionClosed 
+2018-08-01 08:50:33.8596 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-08-01 08:50:35.8953 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-08-01 08:55:06.8906 SuperSocketDemo2.Program.Main Debug:
+      服务器启动成功  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 08:55:28.7981 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-08-01 08:55:28.8101 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 初始化AppSession成功  AppSession`2.Initialize => TestSession.OnInit => TestSession.Send 
+2018-08-01 08:55:28.8511 SuperSocketDemo2.SuperSocket.TestSession.OnSessionStarted Debug:
+      Welcome to SuperSocket Telnet Server  SocketSession.StartSession => AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted 
+2018-08-01 08:55:28.8511 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 连接建立  AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted => TestSession.Send 
+2018-08-01 08:55:40.8074 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = Unknown request: TestCommand  TestSession.HandleUnknownRequest => AppSession`1.HandleUnknownRequest => TestSession.Send 
+2018-08-01 08:55:40.8094 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      接收到客户端数据为：key = TestCommand, para = System.String[], body = 1 1  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-08-01 09:00:56.3271 SuperSocketDemo2.Program.Main Debug:
+      服务器启动成功  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 09:01:03.7409 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-08-01 09:01:03.7479 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 初始化AppSession成功  AppSession`2.Initialize => TestSession.OnInit => TestSession.Send 
+2018-08-01 09:01:03.7914 SuperSocketDemo2.SuperSocket.TestSession.OnSessionStarted Debug:
+      Welcome to SuperSocket Telnet Server  SocketSession.StartSession => AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted 
+2018-08-01 09:01:03.7914 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 连接建立  AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted => TestSession.Send 
+2018-08-01 09:01:08.6491 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = Unknown request: 11  TestSession.HandleUnknownRequest => AppSession`1.HandleUnknownRequest => TestSession.Send 
+2018-08-01 09:01:08.6491 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      接收到客户端数据为：key = 11, para = System.String[], body = 11 11  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-08-01 09:01:51.8552 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = Unknown request: TestCommand  TestSession.HandleUnknownRequest => AppSession`1.HandleUnknownRequest => TestSession.Send 
+2018-08-01 09:01:51.8592 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      接收到客户端数据为：key = TestCommand, para = System.String[], body = 1 1  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-08-01 09:05:56.7394 SuperSocketDemo2.Program.Main Debug:
+      打印的方法信息:命名空间名:SuperSocketDemo2
+类名:SuperSocketDemo2.Program
+方法名:GetMethodInfo
+
+父方法命名空间 SuperSocketDemo2
+父方法类名 Program
+父方法类全名SuperSocketDemo2.Program
+父方法名Main
+  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 09:05:56.9649 SuperSocketDemo2.Program.Main Debug:
+      服务器启动成功  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 09:06:10.7651 SuperSocketDemo2.Program.Main Debug:
+      打印的方法信息:命名空间名:SuperSocketDemo2
+类名:SuperSocketDemo2.Program
+方法名:GetMethodInfo
+
+父方法命名空间 SuperSocketDemo2
+父方法类名 Program
+父方法类全名SuperSocketDemo2.Program
+父方法名Main
+  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 09:06:11.3041 SuperSocketDemo2.Program.Main Debug:
+      服务器启动成功  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 09:27:14.2100 SuperSocketDemo2.Program.Main Debug:
+      打印的方法信息:命名空间名:SuperSocketDemo2
+类名:SuperSocketDemo2.Program
+方法名:GetMethodInfo
+
+父方法命名空间 SuperSocketDemo2
+父方法类名 Program
+父方法类全名SuperSocketDemo2.Program
+父方法名Main
+  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 09:27:14.3715 SuperSocketDemo2.Program.Main Debug:
+      服务器启动成功  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 09:27:17.5561 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-08-01 09:27:17.5621 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 初始化AppSession成功  AppSession`2.Initialize => TestSession.OnInit => TestSession.Send 
+2018-08-01 09:27:17.6016 SuperSocketDemo2.SuperSocket.TestSession.OnSessionStarted Debug:
+      Welcome to SuperSocket Telnet Server  SocketSession.StartSession => AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted 
+2018-08-01 09:27:17.6016 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 连接建立  AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted => TestSession.Send 
+2018-08-01 09:30:10.2857 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = Unknown request: 1  TestSession.HandleUnknownRequest => AppSession`1.HandleUnknownRequest => TestSession.Send 
+2018-08-01 09:30:10.2857 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      接收到客户端数据为：key = 1, para = System.String[], body = 1 1\r\n1 1 1\r\n1 1 1  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-08-01 09:30:18.6164 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = Unknown request: 1  TestSession.HandleUnknownRequest => AppSession`1.HandleUnknownRequest => TestSession.Send 
+2018-08-01 09:30:18.6164 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      接收到客户端数据为：key = 1, para = System.String[], body = 1 1  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-08-01 09:30:36.3036 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = Unknown request: 1  TestSession.HandleUnknownRequest => AppSession`1.HandleUnknownRequest => TestSession.Send 
+2018-08-01 09:30:52.9215 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-08-01 09:31:02.5879 SuperSocketDemo2.Program.Main Debug:
+      打印的方法信息:命名空间名:SuperSocketDemo2
+类名:SuperSocketDemo2.Program
+方法名:GetMethodInfo
+
+父方法命名空间 SuperSocketDemo2
+父方法类名 Program
+父方法类全名SuperSocketDemo2.Program
+父方法名Main
+  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 09:31:02.7769 SuperSocketDemo2.Program.Main Debug:
+      服务器启动成功  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 09:31:15.1046 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-08-01 09:31:15.1111 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 初始化AppSession成功  AppSession`2.Initialize => TestSession.OnInit => TestSession.Send 
+2018-08-01 09:31:15.1496 SuperSocketDemo2.SuperSocket.TestSession.OnSessionStarted Debug:
+      Welcome to SuperSocket Telnet Server  SocketSession.StartSession => AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted 
+2018-08-01 09:31:15.1536 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 连接建立  AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted => TestSession.Send 
+2018-08-01 09:31:15.1536 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = Unknown request: 1  TestSession.HandleUnknownRequest => AppSession`1.HandleUnknownRequest => TestSession.Send 
+2018-08-01 09:31:15.1536 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      接收到客户端数据为：key = 1, para = System.String[], body = 1 1  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-08-01 09:31:18.8154 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = Unknown request: 1  TestSession.HandleUnknownRequest => AppSession`1.HandleUnknownRequest => TestSession.Send 
+2018-08-01 09:31:18.8154 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      接收到客户端数据为：key = 1, para = System.String[], body = 1 1  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-08-01 09:31:33.1526 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = Unknown request: 2  TestSession.HandleUnknownRequest => AppSession`1.HandleUnknownRequest => TestSession.Send 
+2018-08-01 09:31:33.1526 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      接收到客户端数据为：key = 2, para = System.String[], body = 2 2\r\n  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-08-01 10:55:44.8919 SuperSocketDemo2.Program.Main Debug:
+      打印的方法信息:命名空间名:SuperSocketDemo2
+类名:SuperSocketDemo2.Program
+方法名:GetMethodInfo
+
+父方法命名空间 SuperSocketDemo2
+父方法类名 Program
+父方法类全名SuperSocketDemo2.Program
+父方法名Main
+  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 10:55:45.3924 SuperSocketDemo2.Program.Main Debug:
+      服务器启动成功  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 10:55:55.4538 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-08-01 10:56:03.6591 SuperSocketDemo2.Program.Main Debug:
+      打印的方法信息:命名空间名:SuperSocketDemo2
+类名:SuperSocketDemo2.Program
+方法名:GetMethodInfo
+
+父方法命名空间 SuperSocketDemo2
+父方法类名 Program
+父方法类全名SuperSocketDemo2.Program
+父方法名Main
+  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 10:56:03.9241 SuperSocketDemo2.Program.Main Debug:
+      服务器启动成功  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 10:56:08.2199 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-08-01 10:56:08.2199 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 初始化AppSession成功  AppSession`2.Initialize => TestSession.OnInit => TestSession.Send 
+2018-08-01 10:56:08.2710 SuperSocketDemo2.SuperSocket.TestSession.OnSessionStarted Debug:
+      Welcome to SuperSocket Telnet Server  SocketSession.StartSession => AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted 
+2018-08-01 10:56:08.2710 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 连接建立  AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted => TestSession.Send 
+2018-08-01 10:56:19.3823 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = Unknown request: TestCommand 1 1  TestSession.HandleUnknownRequest => AppSession`1.HandleUnknownRequest => TestSession.Send 
+2018-08-01 10:56:19.3823 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      接收到客户端数据为：key = TestCommand 1 1, para = System.String[], body =   AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-08-01 10:56:58.4535 SuperSocketDemo2.Program.Main Debug:
+      打印的方法信息:命名空间名:SuperSocketDemo2
+类名:SuperSocketDemo2.Program
+方法名:GetMethodInfo
+
+父方法命名空间 SuperSocketDemo2
+父方法类名 Program
+父方法类全名SuperSocketDemo2.Program
+父方法名Main
+  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 10:56:58.6635 SuperSocketDemo2.Program.Main Debug:
+      服务器启动成功  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 10:57:01.5239 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-08-01 10:57:01.5299 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 初始化AppSession成功  AppSession`2.Initialize => TestSession.OnInit => TestSession.Send 
+2018-08-01 10:57:01.5704 SuperSocketDemo2.SuperSocket.TestSession.OnSessionStarted Debug:
+      Welcome to SuperSocket Telnet Server  SocketSession.StartSession => AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted 
+2018-08-01 10:57:01.5704 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 连接建立  AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted => TestSession.Send 
+2018-08-01 10:57:12.3386 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = Unknown request: TestCommand 1 1  TestSession.HandleUnknownRequest => AppSession`1.HandleUnknownRequest => TestSession.Send 
+2018-08-01 10:57:12.3411 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      接收到客户端数据为：key = TestCommand 1 1, para = System.String[], body =   AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-08-01 10:57:57.9589 SuperSocketDemo2.Program.Main Debug:
+      打印的方法信息:命名空间名:SuperSocketDemo2
+类名:SuperSocketDemo2.Program
+方法名:GetMethodInfo
+
+父方法命名空间 SuperSocketDemo2
+父方法类名 Program
+父方法类全名SuperSocketDemo2.Program
+父方法名Main
+  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 10:57:58.1649 SuperSocketDemo2.Program.Main Debug:
+      服务器启动成功  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 10:58:02.6924 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-08-01 10:58:02.6924 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 初始化AppSession成功  AppSession`2.Initialize => TestSession.OnInit => TestSession.Send 
+2018-08-01 10:58:02.7429 SuperSocketDemo2.SuperSocket.TestSession.OnSessionStarted Debug:
+      Welcome to SuperSocket Telnet Server  SocketSession.StartSession => AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted 
+2018-08-01 10:58:02.7429 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 连接建立  AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted => TestSession.Send 
+2018-08-01 10:58:12.4521 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = Unknown request: TestCommand 1 1  TestSession.HandleUnknownRequest => AppSession`1.HandleUnknownRequest => TestSession.Send 
+2018-08-01 10:58:12.4521 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      接收到客户端数据为：key = TestCommand 1 1, para = System.String[], body =   AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-08-01 10:58:39.3147 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = Unknown request: TestCommand  TestSession.HandleUnknownRequest => AppSession`1.HandleUnknownRequest => TestSession.Send 
+2018-08-01 10:58:39.3147 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      接收到客户端数据为：key = TestCommand, para = System.String[], body = 1,1  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-08-01 11:00:17.7769 SuperSocketDemo2.Program.Main Debug:
+      打印的方法信息:命名空间名:SuperSocketDemo2
+类名:SuperSocketDemo2.Program
+方法名:GetMethodInfo
+
+父方法命名空间 SuperSocketDemo2
+父方法类名 Program
+父方法类全名SuperSocketDemo2.Program
+父方法名Main
+  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 11:00:18.0529 SuperSocketDemo2.Program.Main Debug:
+      服务器启动成功  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 11:00:21.1729 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-08-01 11:00:21.1729 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 初始化AppSession成功  AppSession`2.Initialize => TestSession.OnInit => TestSession.Send 
+2018-08-01 11:00:21.2209 SuperSocketDemo2.SuperSocket.TestSession.OnSessionStarted Debug:
+      Welcome to SuperSocket Telnet Server  SocketSession.StartSession => AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted 
+2018-08-01 11:00:21.2209 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 连接建立  AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted => TestSession.Send 
+2018-08-01 11:00:36.5557 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = Unknown request: TestCommand   TestSession.HandleUnknownRequest => AppSession`1.HandleUnknownRequest => TestSession.Send 
+2018-08-01 11:00:36.5557 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      接收到客户端数据为：key = TestCommand , para = System.String[], body =  1 , 1  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-08-01 11:01:00.8117 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = Unknown request: TestCommand  TestSession.HandleUnknownRequest => AppSession`1.HandleUnknownRequest => TestSession.Send 
+2018-08-01 11:01:00.8117 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      接收到客户端数据为：key = TestCommand, para = System.String[], body = 1,1  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-08-01 11:01:10.0629 SuperSocketDemo2.SuperSocket.TestSession.OnSessionClosed Debug:
+      OnSessionClosed  AppServer`2.OnSessionClosed => AppServerBase`2.OnSessionClosed => TestSession.OnSessionClosed 
+2018-08-01 11:01:10.0629 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 连接关闭  AppServerBase`2.OnSessionClosed => TestSession.OnSessionClosed => TestSession.Send 
+2018-08-01 11:21:01.1025 SuperSocketDemo2.Program.Main Debug:
+      打印的方法信息:命名空间名:SuperSocketDemo2
+类名:SuperSocketDemo2.Program
+方法名:GetMethodInfo
+
+父方法命名空间 SuperSocketDemo2
+父方法类名 Program
+父方法类全名SuperSocketDemo2.Program
+父方法名Main
+  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 11:21:01.3160 SuperSocketDemo2.Program.Main Debug:
+      服务器启动成功  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 11:21:05.0475 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-08-01 11:21:05.0475 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 初始化AppSession成功  AppSession`2.Initialize => TestSession.OnInit => TestSession.Send 
+2018-08-01 11:21:05.0625 SuperSocketDemo2.SuperSocket.TestServer.OnNewSessionConnected Debug:
+      192.168.11.17  AsyncSocketServer.RegisterSession => AppServerBase`2.SuperSocket.SocketBase.IAppServer.RegisterSession => TestServer.OnNewSessionConnected 
+2018-08-01 11:21:05.1120 SuperSocketDemo2.SuperSocket.TestSession.OnSessionStarted Debug:
+      Welcome to SuperSocket Telnet Server  SocketSession.StartSession => AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted 
+2018-08-01 11:21:05.1120 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 连接建立  AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted => TestSession.Send 
+2018-08-01 11:21:32.7096 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = Unknown request: TestCommand  TestSession.HandleUnknownRequest => AppSession`1.HandleUnknownRequest => TestSession.Send 
+2018-08-01 11:21:32.7096 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      接收到客户端数据为：key = TestCommand, para = System.String[], body = 1,1  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-08-01 11:22:45.1156 SuperSocketDemo2.Program.Main Debug:
+      打印的方法信息:命名空间名:SuperSocketDemo2
+类名:SuperSocketDemo2.Program
+方法名:GetMethodInfo
+
+父方法命名空间 SuperSocketDemo2
+父方法类名 Program
+父方法类全名SuperSocketDemo2.Program
+父方法名Main
+  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 11:22:45.3941 SuperSocketDemo2.Program.Main Debug:
+      服务器启动成功  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 11:22:49.0457 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-08-01 11:22:49.0457 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 初始化AppSession成功  AppSession`2.Initialize => TestSession.OnInit => TestSession.Send 
+2018-08-01 11:22:49.0642 SuperSocketDemo2.SuperSocket.TestServer.OnNewSessionConnected Debug:
+      192.168.11.17  AsyncSocketServer.RegisterSession => AppServerBase`2.SuperSocket.SocketBase.IAppServer.RegisterSession => TestServer.OnNewSessionConnected 
+2018-08-01 11:22:49.0997 SuperSocketDemo2.SuperSocket.TestSession.OnSessionStarted Debug:
+      Welcome to SuperSocket Telnet Server  SocketSession.StartSession => AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted 
+2018-08-01 11:22:49.0997 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 连接建立  AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted => TestSession.Send 
+2018-08-01 11:23:44.8736 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = Unknown request: TestCommand  TestSession.HandleUnknownRequest => AppSession`1.HandleUnknownRequest => TestSession.Send 
+2018-08-01 11:23:44.8736 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      接收到客户端数据为：key = TestCommand, para = System.String[], body = 1,1TestCommand:!,1  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-08-01 11:24:00.3518 SuperSocketDemo2.SuperSocket.TestSession.OnSessionClosed Debug:
+      OnSessionClosed  AppServer`2.OnSessionClosed => AppServerBase`2.OnSessionClosed => TestSession.OnSessionClosed 
+2018-08-01 11:24:00.3518 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 连接关闭  AppServerBase`2.OnSessionClosed => TestSession.OnSessionClosed => TestSession.Send 
+2018-08-01 11:24:04.4931 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-08-01 11:24:04.4931 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 初始化AppSession成功  AppSession`2.Initialize => TestSession.OnInit => TestSession.Send 
+2018-08-01 11:24:04.4976 SuperSocketDemo2.SuperSocket.TestServer.OnNewSessionConnected Debug:
+      192.168.11.17  AsyncSocketServer.RegisterSession => AppServerBase`2.SuperSocket.SocketBase.IAppServer.RegisterSession => TestServer.OnNewSessionConnected 
+2018-08-01 11:24:04.4976 SuperSocketDemo2.SuperSocket.TestSession.OnSessionStarted Debug:
+      Welcome to SuperSocket Telnet Server  SocketSession.StartSession => AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted 
+2018-08-01 11:24:04.4976 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 连接建立  AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted => TestSession.Send 
+2018-08-01 11:24:36.6520 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = Unknown request: TestCommand  TestSession.HandleUnknownRequest => AppSession`1.HandleUnknownRequest => TestSession.Send 
+2018-08-01 11:24:46.0673 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-08-01 11:24:56.5331 SuperSocketDemo2.Program.Main Debug:
+      打印的方法信息:命名空间名:SuperSocketDemo2
+类名:SuperSocketDemo2.Program
+方法名:GetMethodInfo
+
+父方法命名空间 SuperSocketDemo2
+父方法类名 Program
+父方法类全名SuperSocketDemo2.Program
+父方法名Main
+  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 11:24:56.7261 SuperSocketDemo2.Program.Main Debug:
+      服务器启动成功  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 11:25:19.1823 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-08-01 11:25:19.1888 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 初始化AppSession成功  AppSession`2.Initialize => TestSession.OnInit => TestSession.Send 
+2018-08-01 11:25:19.2013 SuperSocketDemo2.SuperSocket.TestServer.OnNewSessionConnected Debug:
+      192.168.11.17  AsyncSocketServer.RegisterSession => AppServerBase`2.SuperSocket.SocketBase.IAppServer.RegisterSession => TestServer.OnNewSessionConnected 
+2018-08-01 11:25:36.7223 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 当前在线用户数：1  AppServerBase`2.SuperSocket.SocketBase.IAppServer.RegisterSession => TestServer.OnNewSessionConnected => TestSession.Send 
+2018-08-01 11:28:36.0692 SuperSocketDemo2.SuperSocket.TestServer.OnNewSessionConnected Debug:
+      当前在线用户数 : 1  AsyncSocketServer.RegisterSession => AppServerBase`2.SuperSocket.SocketBase.IAppServer.RegisterSession => TestServer.OnNewSessionConnected 
+2018-08-01 11:28:36.0907 SuperSocketDemo2.SuperSocket.TestSession.OnSessionStarted Debug:
+      Welcome to SuperSocket Telnet Server  SocketSession.StartSession => AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted 
+2018-08-01 11:28:36.0907 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 连接建立  AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted => TestSession.Send 
+2018-08-01 11:28:36.0907 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = Unknown request: TestCommand  TestSession.HandleUnknownRequest => AppSession`1.HandleUnknownRequest => TestSession.Send 
+2018-08-01 11:28:36.1067 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      接收到客户端数据为：key = TestCommand, para = System.String[], body = 1,1  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-08-01 11:28:47.3097 SuperSocketDemo2.SuperSocket.TestSession.OnSessionClosed Debug:
+      OnSessionClosed  AppServer`2.OnSessionClosed => AppServerBase`2.OnSessionClosed => TestSession.OnSessionClosed 
+2018-08-01 11:28:49.5653 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-08-01 11:28:54.7328 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-08-01 11:29:13.9643 SuperSocketDemo2.Program.Main Debug:
+      打印的方法信息:命名空间名:SuperSocketDemo2
+类名:SuperSocketDemo2.Program
+方法名:GetMethodInfo
+
+父方法命名空间 SuperSocketDemo2
+父方法类名 Program
+父方法类全名SuperSocketDemo2.Program
+父方法名Main
+  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 11:29:14.1608 SuperSocketDemo2.Program.Main Debug:
+      服务器启动成功  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 11:29:19.1796 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-08-01 11:29:19.1851 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 初始化AppSession成功  AppSession`2.Initialize => TestSession.OnInit => TestSession.Send 
+2018-08-01 11:29:19.1851 SuperSocketDemo2.SuperSocket.TestServer.OnNewSessionConnected Debug:
+      192.168.11.17  AsyncSocketServer.RegisterSession => AppServerBase`2.SuperSocket.SocketBase.IAppServer.RegisterSession => TestServer.OnNewSessionConnected 
+2018-08-01 11:29:19.2261 SuperSocketDemo2.SuperSocket.TestSession.OnSessionStarted Debug:
+      Welcome to SuperSocket Telnet Server  SocketSession.StartSession => AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted 
+2018-08-01 11:29:19.2261 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 连接建立  AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted => TestSession.Send 
+2018-08-01 11:29:22.7379 SuperSocketDemo2.SuperSocket.TestSession.OnSessionClosed Debug:
+      OnSessionClosed  AppServer`2.OnSessionClosed => AppServerBase`2.OnSessionClosed => TestSession.OnSessionClosed 
+2018-08-01 11:29:22.7379 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 连接关闭  AppServerBase`2.OnSessionClosed => TestSession.OnSessionClosed => TestSession.Send 
+2018-08-01 11:29:23.6614 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-08-01 11:29:23.6614 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 初始化AppSession成功  AppSession`2.Initialize => TestSession.OnInit => TestSession.Send 
+2018-08-01 11:29:23.6614 SuperSocketDemo2.SuperSocket.TestServer.OnNewSessionConnected Debug:
+      192.168.11.17  AsyncSocketServer.RegisterSession => AppServerBase`2.SuperSocket.SocketBase.IAppServer.RegisterSession => TestServer.OnNewSessionConnected 
+2018-08-01 11:29:23.6674 SuperSocketDemo2.SuperSocket.TestSession.OnSessionStarted Debug:
+      Welcome to SuperSocket Telnet Server  SocketSession.StartSession => AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted 
+2018-08-01 11:29:23.6674 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 连接建立  AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted => TestSession.Send 
+2018-08-01 11:29:36.4842 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = Unknown request: TestCommand  TestSession.HandleUnknownRequest => AppSession`1.HandleUnknownRequest => TestSession.Send 
+2018-08-01 11:29:36.4842 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      接收到客户端数据为：key = TestCommand, para = System.String[], body = 12,2  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-08-01 11:29:40.5957 SuperSocketDemo2.SuperSocket.TestSession.OnSessionClosed Debug:
+      OnSessionClosed  AppServer`2.OnSessionClosed => AppServerBase`2.OnSessionClosed => TestSession.OnSessionClosed 
+2018-08-01 11:29:40.5957 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 连接关闭  AppServerBase`2.OnSessionClosed => TestSession.OnSessionClosed => TestSession.Send 
+2018-08-01 11:29:41.5077 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-08-01 11:29:41.5077 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 初始化AppSession成功  AppSession`2.Initialize => TestSession.OnInit => TestSession.Send 
+2018-08-01 11:29:41.5112 SuperSocketDemo2.SuperSocket.TestServer.OnNewSessionConnected Debug:
+      192.168.11.17  AsyncSocketServer.RegisterSession => AppServerBase`2.SuperSocket.SocketBase.IAppServer.RegisterSession => TestServer.OnNewSessionConnected 
+2018-08-01 11:29:41.5112 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 当前在线用户数：1  AppServerBase`2.SuperSocket.SocketBase.IAppServer.RegisterSession => TestServer.OnNewSessionConnected => TestSession.Send 
+2018-08-01 11:29:41.5112 SuperSocketDemo2.SuperSocket.TestServer.OnNewSessionConnected Debug:
+      当前在线用户数 : 1  AsyncSocketServer.RegisterSession => AppServerBase`2.SuperSocket.SocketBase.IAppServer.RegisterSession => TestServer.OnNewSessionConnected 
+2018-08-01 11:29:41.5112 SuperSocketDemo2.SuperSocket.TestSession.OnSessionStarted Debug:
+      Welcome to SuperSocket Telnet Server  SocketSession.StartSession => AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted 
+2018-08-01 11:29:41.5112 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 连接建立  AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted => TestSession.Send 
+2018-08-01 11:29:45.6831 SuperSocketDemo2.SuperSocket.TestSession.OnSessionClosed Debug:
+      OnSessionClosed  AppServer`2.OnSessionClosed => AppServerBase`2.OnSessionClosed => TestSession.OnSessionClosed 
+2018-08-01 11:29:45.6831 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 连接关闭  AppServerBase`2.OnSessionClosed => TestSession.OnSessionClosed => TestSession.Send 
+2018-08-01 11:29:47.0112 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-08-01 11:29:47.0112 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 初始化AppSession成功  AppSession`2.Initialize => TestSession.OnInit => TestSession.Send 
+2018-08-01 11:29:47.0112 SuperSocketDemo2.SuperSocket.TestServer.OnNewSessionConnected Debug:
+      192.168.11.17  AsyncSocketServer.RegisterSession => AppServerBase`2.SuperSocket.SocketBase.IAppServer.RegisterSession => TestServer.OnNewSessionConnected 
+2018-08-01 11:29:47.0112 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 当前在线用户数：1  AppServerBase`2.SuperSocket.SocketBase.IAppServer.RegisterSession => TestServer.OnNewSessionConnected => TestSession.Send 
+2018-08-01 11:29:47.0112 SuperSocketDemo2.SuperSocket.TestServer.OnNewSessionConnected Debug:
+      当前在线用户数 : 1  AsyncSocketServer.RegisterSession => AppServerBase`2.SuperSocket.SocketBase.IAppServer.RegisterSession => TestServer.OnNewSessionConnected 
+2018-08-01 11:29:47.0112 SuperSocketDemo2.SuperSocket.TestSession.OnSessionStarted Debug:
+      Welcome to SuperSocket Telnet Server  SocketSession.StartSession => AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted 
+2018-08-01 11:29:47.0357 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 连接建立  AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted => TestSession.Send 
+2018-08-01 11:29:49.7381 SuperSocketDemo2.SuperSocket.TestSession.OnSessionClosed Debug:
+      OnSessionClosed  AppServer`2.OnSessionClosed => AppServerBase`2.OnSessionClosed => TestSession.OnSessionClosed 
+2018-08-01 11:29:49.7381 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 连接关闭  AppServerBase`2.OnSessionClosed => TestSession.OnSessionClosed => TestSession.Send 
+2018-08-01 11:29:50.3413 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-08-01 11:29:50.3413 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 初始化AppSession成功  AppSession`2.Initialize => TestSession.OnInit => TestSession.Send 
+2018-08-01 11:29:50.3413 SuperSocketDemo2.SuperSocket.TestServer.OnNewSessionConnected Debug:
+      192.168.11.17  AsyncSocketServer.RegisterSession => AppServerBase`2.SuperSocket.SocketBase.IAppServer.RegisterSession => TestServer.OnNewSessionConnected 
+2018-08-01 11:29:50.3413 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 当前在线用户数：1  AppServerBase`2.SuperSocket.SocketBase.IAppServer.RegisterSession => TestServer.OnNewSessionConnected => TestSession.Send 
+2018-08-01 11:29:50.3413 SuperSocketDemo2.SuperSocket.TestServer.OnNewSessionConnected Debug:
+      当前在线用户数 : 1  AsyncSocketServer.RegisterSession => AppServerBase`2.SuperSocket.SocketBase.IAppServer.RegisterSession => TestServer.OnNewSessionConnected 
+2018-08-01 11:29:50.3413 SuperSocketDemo2.SuperSocket.TestSession.OnSessionStarted Debug:
+      Welcome to SuperSocket Telnet Server  SocketSession.StartSession => AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted 
+2018-08-01 11:29:50.3633 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 连接建立  AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted => TestSession.Send 
+2018-08-01 11:31:30.3537 SuperSocketDemo2.Program.Main Debug:
+      打印的方法信息:命名空间名:SuperSocketDemo2
+类名:SuperSocketDemo2.Program
+方法名:GetMethodInfo
+
+父方法命名空间 SuperSocketDemo2
+父方法类名 Program
+父方法类全名SuperSocketDemo2.Program
+父方法名Main
+  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 11:31:30.6437 SuperSocketDemo2.SuperSocket.TestServer.OnStarted Debug:
+      服务器启动:OnStarted  AppServer`2.Start => AppServerBase`2.Start => TestServer.OnStarted 
+2018-08-01 11:31:30.6437 SuperSocketDemo2.Program.Main Debug:
+      服务器启动成功  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 11:36:26.2192 SuperSocketDemo2.Program.Main Debug:
+      打印的方法信息:命名空间名:SuperSocketDemo2
+类名:SuperSocketDemo2.Program
+方法名:GetMethodInfo
+
+父方法命名空间 SuperSocketDemo2
+父方法类名 Program
+父方法类全名SuperSocketDemo2.Program
+父方法名Main
+  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 11:36:26.4532 SuperSocketDemo2.SuperSocket.TestServer.OnStarted Debug:
+      服务器启动:OnStarted  AppServer`2.Start => AppServerBase`2.Start => TestServer.OnStarted 
+2018-08-01 11:36:30.1470 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-08-01 11:36:30.1540 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 初始化AppSession成功  AppSession`2.Initialize => TestSession.OnInit => TestSession.Send 
+2018-08-01 11:36:30.1540 SuperSocketDemo2.SuperSocket.TestServer.OnNewSessionConnected Debug:
+      192.168.11.17  AsyncSocketServer.RegisterSession => AppServerBase`2.SuperSocket.SocketBase.IAppServer.RegisterSession => TestServer.OnNewSessionConnected 
+2018-08-01 11:36:30.1950 SuperSocketDemo2.SuperSocket.TestSession.OnSessionStarted Debug:
+      Welcome to SuperSocket Telnet Server  SocketSession.StartSession => AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted 
+2018-08-01 11:36:30.1950 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 连接建立  AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted => TestSession.Send 
+2018-08-01 11:36:38.6213 SuperSocketDemo2.SuperSocket.TestSession.OnSessionClosed Debug:
+      OnSessionClosed  AppServer`2.OnSessionClosed => AppServerBase`2.OnSessionClosed => TestSession.OnSessionClosed 
+2018-08-01 11:36:38.6213 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 连接关闭  AppServerBase`2.OnSessionClosed => TestSession.OnSessionClosed => TestSession.Send 
+2018-08-01 11:36:38.6213 SuperSocketDemo2.SuperSocket.TestServer.OnSessionClosed Debug:
+      ip：192.168.11.17， port:64124  Action`2.Invoke => AppServerBase`2.OnSocketSessionClosed => TestServer.OnSessionClosed 
+2018-08-01 11:36:38.6213 SuperSocketDemo2.SuperSocket.TestServer.OnSessionClosed Debug:
+      当前连接数量:0  Action`2.Invoke => AppServerBase`2.OnSocketSessionClosed => TestServer.OnSessionClosed 
+2018-08-01 11:38:22.0111 SuperSocketDemo2.Program.Main Debug:
+      打印的方法信息:命名空间名:SuperSocketDemo2
+类名:SuperSocketDemo2.Program
+方法名:GetMethodInfo
+
+父方法命名空间 SuperSocketDemo2
+父方法类名 Program
+父方法类全名SuperSocketDemo2.Program
+父方法名Main
+  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 11:38:22.2741 SuperSocketDemo2.SuperSocket.TestServer.OnStarted Debug:
+      服务器启动:OnStarted  AppServer`2.Start => AppServerBase`2.Start => TestServer.OnStarted 
+2018-08-01 11:38:25.2316 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-08-01 11:38:25.2316 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 初始化AppSession成功  AppSession`2.Initialize => TestSession.OnInit => TestSession.Send 
+2018-08-01 11:38:25.2496 SuperSocketDemo2.SuperSocket.TestServer.OnNewSessionConnected Debug:
+      192.168.11.17  AsyncSocketServer.RegisterSession => AppServerBase`2.SuperSocket.SocketBase.IAppServer.RegisterSession => TestServer.OnNewSessionConnected 
+2018-08-01 11:38:25.2991 SuperSocketDemo2.SuperSocket.TestSession.OnSessionStarted Debug:
+      Welcome to SuperSocket Telnet Server  SocketSession.StartSession => AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted 
+2018-08-01 11:38:25.2991 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 连接建立  AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted => TestSession.Send 
+2018-08-01 11:38:29.2811 SuperSocketDemo2.SuperSocket.TestSession.OnSessionClosed Debug:
+      OnSessionClosed  AppServer`2.OnSessionClosed => AppServerBase`2.OnSessionClosed => TestSession.OnSessionClosed 
+2018-08-01 11:38:29.2811 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 连接关闭  AppServerBase`2.OnSessionClosed => TestSession.OnSessionClosed => TestSession.Send 
+2018-08-01 11:40:26.9328 SuperSocketDemo2.Program.Main Debug:
+      打印的方法信息:命名空间名:SuperSocketDemo2
+类名:SuperSocketDemo2.Program
+方法名:GetMethodInfo
+
+父方法命名空间 SuperSocketDemo2
+父方法类名 Program
+父方法类全名SuperSocketDemo2.Program
+父方法名Main
+  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 11:40:27.1663 SuperSocketDemo2.SuperSocket.TestServer.OnStarted Debug:
+      服务器启动:OnStarted  AppServer`2.Start => AppServerBase`2.Start => TestServer.OnStarted 
+2018-08-01 11:40:29.4668 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-08-01 11:40:29.4668 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 初始化AppSession成功  AppSession`2.Initialize => TestSession.OnInit => TestSession.Send 
+2018-08-01 11:40:29.4858 SuperSocketDemo2.SuperSocket.TestServer.OnNewSessionConnected Debug:
+      192.168.11.17  AsyncSocketServer.RegisterSession => AppServerBase`2.SuperSocket.SocketBase.IAppServer.RegisterSession => TestServer.OnNewSessionConnected 
+2018-08-01 11:40:29.5193 SuperSocketDemo2.SuperSocket.TestSession.OnSessionStarted Debug:
+      Welcome to SuperSocket Telnet Server  SocketSession.StartSession => AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted 
+2018-08-01 11:40:29.5193 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 连接建立  AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted => TestSession.Send 
+2018-08-01 11:40:31.0892 SuperSocketDemo2.SuperSocket.TestSession.OnSessionClosed Debug:
+      OnSessionClosed  AppServer`2.OnSessionClosed => AppServerBase`2.OnSessionClosed => TestSession.OnSessionClosed 
+2018-08-01 11:40:31.0892 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 连接关闭  AppServerBase`2.OnSessionClosed => TestSession.OnSessionClosed => TestSession.Send 
+2018-08-01 11:40:31.0892 SuperSocketDemo2.SuperSocket.TestServer.OnSessionClosed Debug:
+      远程=ip：192.168.11.17， port:64421  Action`2.Invoke => AppServerBase`2.OnSocketSessionClosed => TestServer.OnSessionClosed 
+2018-08-01 11:41:57.7760 SuperSocketDemo2.Program.Main Debug:
+      打印的方法信息:命名空间名:SuperSocketDemo2
+类名:SuperSocketDemo2.Program
+方法名:GetMethodInfo
+
+父方法命名空间 SuperSocketDemo2
+父方法类名 Program
+父方法类全名SuperSocketDemo2.Program
+父方法名Main
+  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 11:41:58.0780 SuperSocketDemo2.SuperSocket.TestServer.OnStarted Debug:
+      服务器启动:OnStarted  AppServer`2.Start => AppServerBase`2.Start => TestServer.OnStarted 
+2018-08-01 11:42:00.0363 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-08-01 11:42:00.0428 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 初始化AppSession成功  AppSession`2.Initialize => TestSession.OnInit => TestSession.Send 
+2018-08-01 11:42:00.0428 SuperSocketDemo2.SuperSocket.TestServer.OnNewSessionConnected Debug:
+      192.168.11.17  AsyncSocketServer.RegisterSession => AppServerBase`2.SuperSocket.SocketBase.IAppServer.RegisterSession => TestServer.OnNewSessionConnected 
+2018-08-01 11:42:00.0863 SuperSocketDemo2.SuperSocket.TestSession.OnSessionStarted Debug:
+      Welcome to SuperSocket Telnet Server  SocketSession.StartSession => AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted 
+2018-08-01 11:42:00.0863 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 连接建立  AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted => TestSession.Send 
+2018-08-01 11:42:02.5852 SuperSocketDemo2.SuperSocket.TestSession.OnSessionClosed Debug:
+      OnSessionClosed  AppServer`2.OnSessionClosed => AppServerBase`2.OnSessionClosed => TestSession.OnSessionClosed 
+2018-08-01 11:42:02.5852 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 连接关闭  AppServerBase`2.OnSessionClosed => TestSession.OnSessionClosed => TestSession.Send 
+2018-08-01 11:42:02.5852 SuperSocketDemo2.SuperSocket.TestServer.OnSessionClosed Debug:
+      远程=ip：192.168.11.17， port:64565  Action`2.Invoke => AppServerBase`2.OnSocketSessionClosed => TestServer.OnSessionClosed 
+2018-08-01 11:42:02.5892 SuperSocketDemo2.SuperSocket.TestServer.OnSessionClosed Debug:
+      本地=ip:192.168.11.17, port:5005  Action`2.Invoke => AppServerBase`2.OnSocketSessionClosed => TestServer.OnSessionClosed 
+2018-08-01 16:14:01.7576 SuperSocketDemo2.Program.Main Debug:
+      打印的方法信息:命名空间名:SuperSocketDemo2
+类名:SuperSocketDemo2.Program
+方法名:GetMethodInfo
+
+父方法命名空间 SuperSocketDemo2
+父方法类名 Program
+父方法类全名SuperSocketDemo2.Program
+父方法名Main
+  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 16:14:02.1101 SuperSocketDemo2.SuperSocket.TestServer.OnStarted Debug:
+      服务器启动:OnStarted  AppServer`2.Start => AppServerBase`2.Start => TestServer.OnStarted 
+2018-08-01 16:14:25.7306 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-08-01 16:14:25.7306 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 初始化AppSession成功  AppSession`2.Initialize => TestSession.OnInit => TestSession.Send 
+2018-08-01 16:14:25.7476 SuperSocketDemo2.SuperSocket.TestServer.OnNewSessionConnected Debug:
+      192.168.11.17  AsyncSocketServer.RegisterSession => AppServerBase`2.SuperSocket.SocketBase.IAppServer.RegisterSession => TestServer.OnNewSessionConnected 
+2018-08-01 16:14:25.7696 SuperSocketDemo2.SuperSocket.TestSession.OnSessionStarted Debug:
+      Welcome to SuperSocket Telnet Server  SocketSession.StartSession => AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted 
+2018-08-01 16:14:25.7696 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = 连接建立  AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted => TestSession.Send 
+2018-08-01 16:14:40.3964 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = Unknown request: TestCommand  TestSession.HandleUnknownRequest => AppSession`1.HandleUnknownRequest => TestSession.Send 
+2018-08-01 16:14:40.3964 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      接收到客户端数据为：key = TestCommand, para = System.String[], body = 1,2  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-08-01 16:15:03.2149 SuperSocketDemo2.SuperSocket.TestSession.Send Debug:
+      发送的数据为 = Unknown request: TestCommand  TestSession.HandleUnknownRequest => AppSession`1.HandleUnknownRequest => TestSession.Send 
+2018-08-01 16:15:03.2149 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      接收到客户端数据为：key = TestCommand, para = System.String[], body = 1,2  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-08-01 16:18:26.7088 SuperSocketDemo2.Program.Main Debug:
+      打印的方法信息:命名空间名:SuperSocketDemo2
+类名:SuperSocketDemo2.Program
+方法名:GetMethodInfo
+
+父方法命名空间 SuperSocketDemo2
+父方法类名 Program
+父方法类全名SuperSocketDemo2.Program
+父方法名Main
+  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 16:18:26.8953 SuperSocketDemo2.SuperSocket.TestServer.OnStarted Debug:
+      服务器启动:OnStarted  AppServer`2.Start => AppServerBase`2.Start => TestServer.OnStarted 
+2018-08-01 16:18:52.1221 SuperSocketDemo2.Program.Main Debug:
+      打印的方法信息:命名空间名:SuperSocketDemo2
+类名:SuperSocketDemo2.Program
+方法名:GetMethodInfo
+
+父方法命名空间 SuperSocketDemo2
+父方法类名 Program
+父方法类全名SuperSocketDemo2.Program
+父方法名Main
+  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 16:18:52.3186 SuperSocketDemo2.SuperSocket.TestServer.OnStarted Debug:
+      服务器启动:OnStarted  AppServer`2.Start => AppServerBase`2.Start => TestServer.OnStarted 
+2018-08-01 16:18:57.9915 SuperSocketDemo2.SuperSocket.TestServer.OnNewSessionConnected Debug:
+      192.168.11.17  AsyncSocketServer.RegisterSession => AppServerBase`2.SuperSocket.SocketBase.IAppServer.RegisterSession => TestServer.OnNewSessionConnected 
+2018-08-01 16:24:06.3573 SuperSocketDemo2.Program.Main Debug:
+      打印的方法信息:命名空间名:SuperSocketDemo2
+类名:SuperSocketDemo2.Program
+方法名:GetMethodInfo
+
+父方法命名空间 SuperSocketDemo2
+父方法类名 Program
+父方法类全名SuperSocketDemo2.Program
+父方法名Main
+  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 16:24:06.5988 SuperSocketDemo2.SuperSocket.TestServer.OnStarted Debug:
+      服务器启动:OnStarted  AppServer`2.Start => AppServerBase`2.Start => TestServer.OnStarted 
+2018-08-01 16:24:16.1115 SuperSocketDemo2.Program.Main Debug:
+      打印的方法信息:命名空间名:SuperSocketDemo2
+类名:SuperSocketDemo2.Program
+方法名:GetMethodInfo
+
+父方法命名空间 SuperSocketDemo2
+父方法类名 Program
+父方法类全名SuperSocketDemo2.Program
+父方法名Main
+  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 16:24:16.2900 SuperSocketDemo2.SuperSocket.TestServer.OnStarted Debug:
+      服务器启动:OnStarted  AppServer`2.Start => AppServerBase`2.Start => TestServer.OnStarted 
+2018-08-01 16:24:37.1062 SuperSocketDemo2.SuperSocket.TestServer.OnNewSessionConnected Debug:
+      192.168.11.17  AsyncSocketServer.RegisterSession => AppServerBase`2.SuperSocket.SocketBase.IAppServer.RegisterSession => TestServer.OnNewSessionConnected 
+2018-08-01 16:25:54.4411 SuperSocketDemo2.Program.Main Debug:
+      打印的方法信息:命名空间名:SuperSocketDemo2
+类名:SuperSocketDemo2.Program
+方法名:GetMethodInfo
+
+父方法命名空间 SuperSocketDemo2
+父方法类名 Program
+父方法类全名SuperSocketDemo2.Program
+父方法名Main
+  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 16:25:54.7451 SuperSocketDemo2.SuperSocket.TestServer.OnStarted Debug:
+      服务器启动:OnStarted  AppServer`2.Start => AppServerBase`2.Start => TestServer.OnStarted 
+2018-08-01 16:26:05.8333 SuperSocketDemo2.SuperSocket.TestServer.OnNewSessionConnected Debug:
+      192.168.11.17  AsyncSocketServer.RegisterSession => AppServerBase`2.SuperSocket.SocketBase.IAppServer.RegisterSession => TestServer.OnNewSessionConnected 
+2018-08-01 16:26:55.9960 SuperSocketDemo2.Program.Main Debug:
+      打印的方法信息:命名空间名:SuperSocketDemo2
+类名:SuperSocketDemo2.Program
+方法名:GetMethodInfo
+
+父方法命名空间 SuperSocketDemo2
+父方法类名 Program
+父方法类全名SuperSocketDemo2.Program
+父方法名Main
+  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 16:26:56.2260 SuperSocketDemo2.SuperSocket.TestServer.OnStarted Debug:
+      服务器启动:OnStarted  AppServer`2.Start => AppServerBase`2.Start => TestServer.OnStarted 
+2018-08-01 16:26:59.3142 SuperSocketDemo2.SuperSocket.TestServer.OnNewSessionConnected Debug:
+      192.168.11.17  AsyncSocketServer.RegisterSession => AppServerBase`2.SuperSocket.SocketBase.IAppServer.RegisterSession => TestServer.OnNewSessionConnected 
+2018-08-01 16:32:53.1986 SuperSocketDemo2.Program.Main Debug:
+      打印的方法信息:命名空间名:SuperSocketDemo2
+类名:SuperSocketDemo2.Program
+方法名:GetMethodInfo
+
+父方法命名空间 SuperSocketDemo2
+父方法类名 Program
+父方法类全名SuperSocketDemo2.Program
+父方法名Main
+  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 16:32:53.3905 SuperSocketDemo2.SuperSocket.TestServer.OnStarted Debug:
+      服务器启动:OnStarted  AppServer`2.Start => AppServerBase`2.Start => TestServer.OnStarted 
+2018-08-01 16:32:58.4270 SuperSocketDemo2.SuperSocket.TestServer.OnNewSessionConnected Debug:
+      192.168.11.17  AsyncSocketServer.RegisterSession => AppServerBase`2.SuperSocket.SocketBase.IAppServer.RegisterSession => TestServer.OnNewSessionConnected 
+2018-08-01 16:33:40.7228 SuperSocketDemo2.Program.Main Debug:
+      打印的方法信息:命名空间名:SuperSocketDemo2
+类名:SuperSocketDemo2.Program
+方法名:GetMethodInfo
+
+父方法命名空间 SuperSocketDemo2
+父方法类名 Program
+父方法类全名SuperSocketDemo2.Program
+父方法名Main
+  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 16:33:40.9063 SuperSocketDemo2.SuperSocket.TestServer.OnStarted Debug:
+      服务器启动:OnStarted  AppServer`2.Start => AppServerBase`2.Start => TestServer.OnStarted 
+2018-08-01 16:33:48.0448 SuperSocketDemo2.SuperSocket.TestServer.OnNewSessionConnected Debug:
+      192.168.11.17  AsyncSocketServer.RegisterSession => AppServerBase`2.SuperSocket.SocketBase.IAppServer.RegisterSession => TestServer.OnNewSessionConnected 
+2018-08-01 16:49:06.5797 SuperSocketDemo2.Program.Main Debug:
+      打印的方法信息:命名空间名:SuperSocketDemo2
+类名:SuperSocketDemo2.Program
+方法名:GetMethodInfo
+
+父方法命名空间 SuperSocketDemo2
+父方法类名 Program
+父方法类全名SuperSocketDemo2.Program
+父方法名Main
+  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 16:49:06.8642 SuperSocketDemo2.SuperSocket.TestServer.OnStarted Debug:
+      服务器启动:OnStarted  AppServer`2.Start => AppServerBase`2.Start => TestServer.OnStarted 
+2018-08-01 16:49:07.7934 SuperSocketDemo2.SuperSocket.TestServer.OnNewSessionConnected Debug:
+      192.168.11.17  AsyncSocketServer.RegisterSession => AppServerBase`2.SuperSocket.SocketBase.IAppServer.RegisterSession => TestServer.OnNewSessionConnected 
+2018-08-01 16:51:10.3325 SuperSocketDemo2.Program.Main Debug:
+      打印的方法信息:命名空间名:SuperSocketDemo2
+类名:SuperSocketDemo2.Program
+方法名:GetMethodInfo
+
+父方法命名空间 SuperSocketDemo2
+父方法类名 Program
+父方法类全名SuperSocketDemo2.Program
+父方法名Main
+  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 16:51:10.5410 SuperSocketDemo2.SuperSocket.TestServer.OnStarted Debug:
+      服务器启动:OnStarted  AppServer`2.Start => AppServerBase`2.Start => TestServer.OnStarted 
+2018-08-01 16:51:17.5626 SuperSocketDemo2.SuperSocket.TestServer.OnNewSessionConnected Debug:
+      192.168.11.17  AsyncSocketServer.RegisterSession => AppServerBase`2.SuperSocket.SocketBase.IAppServer.RegisterSession => TestServer.OnNewSessionConnected 
+2018-08-01 16:52:42.3668 SuperSocketDemo2.Program.Main Debug:
+      打印的方法信息:命名空间名:SuperSocketDemo2
+类名:SuperSocketDemo2.Program
+方法名:GetMethodInfo
+
+父方法命名空间 SuperSocketDemo2
+父方法类名 Program
+父方法类全名SuperSocketDemo2.Program
+父方法名Main
+  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 16:52:42.5768 SuperSocketDemo2.SuperSocket.TestServer.OnStarted Debug:
+      服务器启动:OnStarted  AppServer`2.Start => AppServerBase`2.Start => TestServer.OnStarted 
+2018-08-01 16:52:46.0489 SuperSocketDemo2.SuperSocket.TestServer.OnNewSessionConnected Debug:
+      192.168.11.17  AsyncSocketServer.RegisterSession => AppServerBase`2.SuperSocket.SocketBase.IAppServer.RegisterSession => TestServer.OnNewSessionConnected 
+2018-08-01 16:53:46.0071 SuperSocketDemo2.Program.Main Debug:
+      打印的方法信息:命名空间名:SuperSocketDemo2
+类名:SuperSocketDemo2.Program
+方法名:GetMethodInfo
+
+父方法命名空间 SuperSocketDemo2
+父方法类名 Program
+父方法类全名SuperSocketDemo2.Program
+父方法名Main
+  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-08-01 16:53:46.2346 SuperSocketDemo2.SuperSocket.TestServer.OnStarted Debug:
+      服务器启动:OnStarted  AppServer`2.Start => AppServerBase`2.Start => TestServer.OnStarted 
+2018-08-01 16:53:49.5363 SuperSocketDemo2.SuperSocket.TestServer.OnNewSessionConnected Debug:
+      192.168.11.17  AsyncSocketServer.RegisterSession => AppServerBase`2.SuperSocket.SocketBase.IAppServer.RegisterSession => TestServer.OnNewSessionConnected 

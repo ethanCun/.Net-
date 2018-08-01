@@ -1,0 +1,230 @@
+2018-07-27 11:24:22.4945 SuperSocketDemo2.Program.Main Debug:
+      服务器启动成功  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-07-27 11:25:44.7830 SuperSocketDemo2.Program.Main Debug:
+      服务器启动成功  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-07-27 11:27:06.8269 SuperSocketDemo2.Program.Main Debug:
+      服务器启动成功  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-07-27 11:27:11.8158 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-07-27 11:27:11.8508 SuperSocketDemo2.SuperSocket.TestSession.OnSessionStarted Debug:
+      OnSessionStarted  SocketSession.StartSession => AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted 
+2018-07-27 11:28:04.6509 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      HandleUnknownRequest  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 11:28:25.1465 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      HandleUnknownRequest  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 11:28:25.1707 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      HandleUnknownRequest  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 11:30:48.6745 SuperSocketDemo2.Program.Main Debug:
+      服务器启动成功  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-07-27 11:30:55.1662 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-07-27 11:30:55.2032 SuperSocketDemo2.SuperSocket.TestSession.OnSessionStarted Debug:
+      OnSessionStarted  SocketSession.StartSession => AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted 
+2018-07-27 11:31:11.6146 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      requestInfo  key = TestCommand, para = System.String[], body = 1 1  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 11:34:14.7234 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      requestInfo  key = 1111, para = System.String[], body =   AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 11:34:39.4756 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      requestInfo  key = TestCommand, para = System.String[], body = 10 10  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 11:35:48.5808 SuperSocketDemo2.Program.Main Debug:
+      服务器启动成功  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-07-27 11:35:54.0646 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-07-27 11:35:54.0966 SuperSocketDemo2.SuperSocket.TestSession.OnSessionStarted Debug:
+      OnSessionStarted  SocketSession.StartSession => AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted 
+2018-07-27 11:36:13.3043 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      requestInfo  key = TestCommand, para = System.String[], body = 10 10  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 11:42:34.1786 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      requestInfo  key = 111111, para = System.String[], body =   AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 11:42:41.3391 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      requestInfo  key = , para = System.String[], body =   AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 11:42:41.3391 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      requestInfo  key = , para = System.String[], body =   AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 11:42:41.3391 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      requestInfo  key = , para = System.String[], body =   AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 11:42:41.3391 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      requestInfo  key = , para = System.String[], body =   AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 11:42:41.3391 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      requestInfo  key = , para = System.String[], body =   AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 11:42:41.3391 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      requestInfo  key = , para = System.String[], body =   AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 11:42:41.3551 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      requestInfo  key = , para = System.String[], body =   AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 11:42:41.3551 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      requestInfo  key = , para = System.String[], body =   AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 11:42:41.3551 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      requestInfo  key = , para = System.String[], body =   AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 11:42:41.3551 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      requestInfo  key = , para = System.String[], body =   AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 11:42:41.3551 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      requestInfo  key = , para = System.String[], body =   AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 11:42:41.3551 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      requestInfo  key = , para = System.String[], body =   AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 11:42:41.3751 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      requestInfo  key = 789879, para = System.String[], body =   AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 11:42:49.0420 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      requestInfo  key = 1, para = System.String[], body =   AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 11:43:09.9123 SuperSocketDemo2.Program.Main Debug:
+      服务器启动成功  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-07-27 11:43:13.7463 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-07-27 11:43:13.7823 SuperSocketDemo2.SuperSocket.TestSession.OnSessionStarted Debug:
+      OnSessionStarted  SocketSession.StartSession => AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted 
+2018-07-27 11:47:28.4673 SuperSocketDemo2.Program.Main Debug:
+      服务器启动成功  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-07-27 11:47:32.1462 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-07-27 11:47:50.9117 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-07-27 11:48:24.4740 SuperSocketDemo2.Program.Main Debug:
+      服务器启动成功  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-07-27 11:48:31.6767 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-07-27 11:48:31.7092 SuperSocketDemo2.SuperSocket.TestSession.OnSessionStarted Debug:
+      OnSessionStarted  SocketSession.StartSession => AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted 
+2018-07-27 11:48:49.5179 SuperSocketDemo2.SuperSocket.TestSession.OnSessionClosed Debug:
+      OnSessionClosed  AppServer`2.OnSessionClosed => AppServerBase`2.OnSessionClosed => TestSession.OnSessionClosed 
+2018-07-27 11:48:51.2503 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-07-27 11:48:51.2503 SuperSocketDemo2.SuperSocket.TestSession.OnSessionStarted Debug:
+      OnSessionStarted  SocketSession.StartSession => AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted 
+2018-07-27 11:49:24.8501 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      key = 1111, para = System.String[], body =   AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 11:49:44.6670 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      key = TestCommand, para = System.String[], body = 11 00  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 12:16:16.7833 SuperSocketDemo2.Program.Main Debug:
+      服务器启动成功  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-07-27 12:16:20.7877 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-07-27 12:16:20.8237 SuperSocketDemo2.SuperSocket.TestSession.OnSessionStarted Debug:
+      OnSessionStarted  SocketSession.StartSession => AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted 
+2018-07-27 12:16:20.8237 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      key = TestCommand, para = System.String[], body = 11 11  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 12:16:20.8467 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      key = TestCommand, para = System.String[], body = 11 11  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 12:16:20.8467 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      key = TestCommand, para = System.String[], body = 11 11  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 12:16:20.8467 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      key = TestCommand, para = System.String[], body = 11 11  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 12:16:20.8467 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      key = TestCommand, para = System.String[], body = 11 11  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 12:16:20.8467 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      key = TestCommand, para = System.String[], body = 11 11  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 12:16:20.8547 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      key = TestCommand, para = System.String[], body = 11 11  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 12:16:20.8547 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      key = TestCommand, para = System.String[], body = 11 11  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 12:16:20.8547 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      key = TestCommand, para = System.String[], body = 11 11  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 12:16:20.8547 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      key = TestCommand, para = System.String[], body = 11 11  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 12:16:31.2003 SuperSocketDemo2.SuperSocket.TestSession.OnSessionClosed Debug:
+      OnSessionClosed  AppServer`2.OnSessionClosed => AppServerBase`2.OnSessionClosed => TestSession.OnSessionClosed 
+2018-07-27 12:16:35.0051 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-07-27 12:16:35.0051 SuperSocketDemo2.SuperSocket.TestSession.OnSessionStarted Debug:
+      OnSessionStarted  SocketSession.StartSession => AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted 
+2018-07-27 12:17:53.9255 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      key = 111, para = System.String[], body = 111  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 12:17:53.9325 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      key = 111, para = System.String[], body = 111  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 12:17:53.9325 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      key = 111, para = System.String[], body = 111  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 12:17:53.9325 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      key = 111, para = System.String[], body = 111  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 12:17:53.9325 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      key = 111, para = System.String[], body = 111  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 12:17:53.9325 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      key = 111, para = System.String[], body = 111  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 12:17:53.9325 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      key = 111, para = System.String[], body = 111  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 12:17:53.9522 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      key = 111, para = System.String[], body = 111  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 12:17:53.9522 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      key = 111, para = System.String[], body = 111  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 12:17:53.9522 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      key = 111, para = System.String[], body = 111  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 12:18:05.8343 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      key = 1qq, para = System.String[], body =   AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 12:18:05.8343 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      key = 1qq, para = System.String[], body =   AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 12:18:05.8423 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      key = 1qq, para = System.String[], body =   AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 12:18:05.8423 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      key = 1qq, para = System.String[], body =   AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 12:18:05.8423 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      key = 1qq, para = System.String[], body =   AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 12:18:05.8573 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      key = 1qq, para = System.String[], body =   AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 12:18:05.8573 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      key = 1qq, para = System.String[], body =   AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 12:18:05.8573 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      key = 1qq, para = System.String[], body =   AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 12:18:05.8573 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      key = 1qq, para = System.String[], body =   AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 12:18:05.8823 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      key = 1qq, para = System.String[], body =   AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 12:18:20.9559 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      key = 1212, para = System.String[], body =   AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 12:18:47.6446 SuperSocketDemo2.SuperSocket.TestSession.OnSessionClosed Debug:
+      OnSessionClosed  AppServer`2.OnSessionClosed => AppServerBase`2.OnSessionClosed => TestSession.OnSessionClosed 
+2018-07-27 12:19:09.1110 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-07-27 12:19:09.1110 SuperSocketDemo2.SuperSocket.TestSession.OnSessionStarted Debug:
+      OnSessionStarted  SocketSession.StartSession => AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted 
+2018-07-27 12:19:24.0414 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      key = qqq, para = System.String[], body = \nqqqq  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 12:21:58.0446 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      key = add, para = System.String[], body = 1 1  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 14:27:35.8051 SuperSocketDemo2.Program.Main Debug:
+      服务器启动成功  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-07-27 14:27:38.1970 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-07-27 14:27:38.2320 SuperSocketDemo2.SuperSocket.TestSession.OnSessionStarted Debug:
+      OnSessionStarted  SocketSession.StartSession => AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted 
+2018-07-27 14:27:38.2470 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      key = aa, para = System.String[], body = aa a  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 14:28:19.7900 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      key = ????key, para = System.String[], body =   ????body  -body  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 15:15:10.8671 SuperSocketDemo2.Program.Main Debug:
+      服务器启动成功  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-07-27 15:15:23.8401 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-07-27 15:15:23.8711 SuperSocketDemo2.SuperSocket.TestSession.OnSessionStarted Debug:
+      OnSessionStarted  SocketSession.StartSession => AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted 
+2018-07-27 15:16:29.6150 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      key = key, para = System.String[], body = bo dy\r\nkey body body  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 15:16:53.0709 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      key = 1, para = System.String[], body = 2 3  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 15:18:18.8027 SuperSocketDemo2.Program.Main Debug:
+      服务器启动成功  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-07-27 15:18:22.4809 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-07-27 15:20:25.5817 SuperSocketDemo2.Program.Main Debug:
+      服务器启动成功  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-07-27 15:20:29.2310 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-07-27 15:20:29.2660 SuperSocketDemo2.SuperSocket.TestSession.OnSessionStarted Debug:
+      OnSessionStarted  SocketSession.StartSession => AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted 
+2018-07-27 15:20:36.4376 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      key = 1, para = System.String[], body = 11 111  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 15:37:39.9893 SuperSocketDemo2.Program.Main Debug:
+      服务器启动成功  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-07-27 15:37:56.4256 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-07-27 15:37:56.4616 SuperSocketDemo2.SuperSocket.TestSession.OnSessionStarted Debug:
+      OnSessionStarted  SocketSession.StartSession => AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted 
+2018-07-27 15:38:24.7652 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      key = aa, para = System.String[], body = a a   AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 15:40:45.4304 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      key = ss, para = System.String[], body = ss a  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 15:49:52.6036 SuperSocketDemo2.Program.Main Debug:
+      服务器启动成功  AppDomain.ExecuteAssembly => AppDomain._nExecuteAssembly => Program.Main 
+2018-07-27 15:49:55.1603 SuperSocketDemo2.SuperSocket.TestSession.OnInit Debug:
+      OnInit  AppServerBase`2.SuperSocket.SocketBase.IAppServer.CreateAppSession => AppSession`2.Initialize => TestSession.OnInit 
+2018-07-27 15:49:55.1993 SuperSocketDemo2.SuperSocket.TestSession.OnSessionStarted Debug:
+      OnSessionStarted  SocketSession.StartSession => AppSession`2.SuperSocket.SocketBase.IAppSession.StartSession => TestSession.OnSessionStarted 
+2018-07-27 15:50:11.0943 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      key = TestCommand, para = System.String[], body = 1 1  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
+2018-07-27 15:53:58.8210 SuperSocketDemo2.SuperSocket.TestSession.HandleUnknownRequest Debug:
+      key = TestCommand, para = System.String[], body = 1 1  AppServerBase`2.ExecuteCommand => AppSession`2.InternalHandleUnknownRequest => TestSession.HandleUnknownRequest 
