@@ -1256,16 +1256,10 @@ select @@IDENTITY
         //> 自定义命令解析处理 > 触发Send事件返回服务器处理数据
          // 注意设置为public权限
     public class ADD : CommandBase<TestSession, StringRequestInfo>
-
     {
-  
-      public override void ExecuteCommand(TestSession session, StringRequestInfo requestInfo)
-
+        public override void ExecuteCommand(TestSession session, StringRequestInfo requestInfo)
         {
-       
-     session.Send(requestInfo.Parameters.Select(p => Convert.ToDouble(p)).Sum().ToString());
-   
-     }
-  
-  } 
+            session.Send(requestInfo.Parameters.Select(p => Convert.ToDouble(p)).Sum().ToString());
+        }
+    }
 ```
