@@ -1,0 +1,14 @@
+E:\GenericDemo2\GenericDemo2\bin\Debug\GenericDemo2.exe.config
+E:\GenericDemo2\GenericDemo2\bin\Debug\GenericDemo2.exe
+E:\GenericDemo2\GenericDemo2\bin\Debug\GenericDemo2.pdb
+E:\GenericDemo2\GenericDemo2\obj\Debug\GenericDemo2.csprojResolveAssemblyReference.cache
+E:\GenericDemo2\GenericDemo2\obj\Debug\GenericDemo2.exe
+E:\GenericDemo2\GenericDemo2\obj\Debug\GenericDemo2.pdb
+E:\GenericDemo2\GenericDemo2\bin\Debug\log4net.dll
+E:\GenericDemo2\GenericDemo2\bin\Debug\SuperSocket.Common.dll
+E:\GenericDemo2\GenericDemo2\bin\Debug\SuperSocket.Facility.dll
+E:\GenericDemo2\GenericDemo2\bin\Debug\SuperSocket.SocketBase.dll
+E:\GenericDemo2\GenericDemo2\bin\Debug\log4net.xml
+E:\GenericDemo2\GenericDemo2\bin\Debug\SuperSocket.Common.xml
+E:\GenericDemo2\GenericDemo2\bin\Debug\SuperSocket.Facility.xml
+E:\GenericDemo2\GenericDemo2\bin\Debug\SuperSocket.SocketBase.xml
