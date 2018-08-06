@@ -1,9 +1,22 @@
-﻿
+﻿<a href="#VisualSVN serevr与tortoiseSVN client" rel="nofollow" target="_blank">1. 使用Markdown语法增加的跳转到“前言”的链接</a></p>
+<a href="#泛型类与泛型参数" rel="nofollow" target="_blank">2. c#中的泛型类与泛型参数</a></p>
+<a href="#泛型类继承自普通类、普通类继承自泛型类、泛型类继承自泛型类的情况" rel="nofollow" target="_blank">3. c#中泛型类继承自普通类、普通类继承自泛型类、泛型类继承自泛型类的情况
+</a></p>
+<a href="#为webapi添加接口注释和测试功能" rel="nofollow" target="_blank">4. 为webapi添加接口注释和测试功能</a></p>
+<a href="#webapi接口返回值： IHttpActionResult HttpResponseMessage 与 自定义类型" rel="nofollow" target="_blank">5. webapi接口返回值： IHttpActionResult HttpResponseMessage 与 自定义类型</a></p>
+<a href="#自定义的webApi接口返回值" rel="nofollow" target="_blank">6. 自定义的webApi接口返回值</a></p>
+<a href="#PetaPoco（ORM操作）的简单实用" rel="nofollow" target="_blank">7. PetaPoco（ORM操作）的简单实用</a></p>
+<a href="#PetaPoco分页获取信息Web.config" rel="nofollow" target="_blank">8. PetaPoco分页获取信息Web.config</a></p>
+<a href="#多层数组结构的处理" rel="nofollow" target="_blank">9. 多层数组结构的处理</a></p>
+<a href="#多层结构的api" rel="nofollow" target="_blank">10. 多层结构的api 详见OrderDetail</a></p>
+<a href="#Newtonsoft ： json与对象的相互转换" rel="nofollow" target="_blank">11. Newtonsoft ： json与对象的相互转换</a></p>
+<a href="#插入或者更新一条信息" rel="nofollow" target="_blank">12. 插入或者更新一条信息： 表中存在该信息 则更新（先删除原来存在的 再插入新的数据） 表中不存在该数据 则添加</a></p>
+<a href="#常用复杂Sql语句" rel="nofollow" target="_blank">13. 常用复杂Sql语句</a></p>
+<a href="#Nlog日志记录" rel="nofollow" target="_blank">14. Nlog日志记录</a></p>
+<a href="#SuperSocket使用" rel="nofollow" target="_blank">15. SuperSocket使用</a></p>
 
-<h3 id='VisualSVN serevr与tortoiseSVN client'>windows下SVN版本控制VisualSVN serevr与tortoiseSVN client（类似mac上Cornerstone）的使用</h3>
 
-
-### windows下SVN版本控制VisualSVN serevr与tortoiseSVN client（类似mac上Cornerstone）的使用
+<h4 id='VisualSVN serevr与tortoiseSVN client'>windows下SVN版本控制VisualSVN serevr与tortoiseSVN client（类似mac上Cornerstone）的使用</h4>
 
 ####1. TortoiseSVN 使用： [https://blog.csdn.net/maplejaw_/article/details/52874348](https://blog.csdn.net/maplejaw_/article/details/52874348)
 
@@ -16,8 +29,7 @@
    · Commit与Update: 桌面右键 SVN Commit / SVN Update
    
 ```
-
-### c#泛型类与泛型参数
+<h4 id='泛型类与泛型参数'>c#泛型类与泛型参数</h4>
 ```
            //集合与数组区别：1.长度可变 2.元素类型可不一致
             //List<T>  T:type 用来定义泛型类时的占位符 T出现的位置在实例化时可以使用任意的类型来替代
@@ -162,7 +174,8 @@
         }
     }
 ```
-#### c#中泛型类继承自普通类、普通类继承自泛型类、泛型类继承自泛型类的情况
+
+<h4 id="泛型类继承自普通类、普通类继承自泛型类、泛型类继承自泛型类的情况">c#中泛型类继承自普通类、普通类继承自泛型类、泛型类继承自泛型类的情况</h4>
 ```
     /// <summary>
     /// 泛型类继承自普通类
@@ -435,7 +448,7 @@
             tg5.output();
 ```
 
-### 为webapi添加接口注释和测试功能
+<h4 id="为webapi添加接口注释和测试功能">为webapi添加接口注释和测试功能</h4>
 ```
 接口注释参考链接： https://blog.csdn.net/a123_z/article/details/71078062
 测试功能：NuGet添加WebApiTestClient，需在 Areas\HelpPage\Views\Help\Api.cshtml文件最后面添加：
@@ -447,7 +460,7 @@
 }
 ```
 
-### webapi接口返回值： IHttpActionResult HttpResponseMessage 与 自定义类型 
+<h4 id="webapi接口返回值： IHttpActionResult HttpResponseMessage 与 自定义类型">webapi接口返回值： IHttpActionResult HttpResponseMessage 与 自定义类型</h4>
 ```
         /// <summary>
         /// 测试返回类型的接口  返回类型为 ： Json<T>(T content)
@@ -640,7 +653,7 @@
         }
 ```
 
-#### 自定义的webApi接口返回值：
+<h4 id="自定义的webApi接口返回值">自定义的webApi接口返回值</h4>
 ```
     public class RequestResult : IHttpActionResult
     {
@@ -701,7 +714,7 @@
         }
 ```
 
-### PetaPoco（ORM操作）的简单实用
+<h4 id="PetaPoco（ORM操作）的简单实用">PetaPoco（ORM操作）的简单实用</h4>
 ```
         /// <summary>
         /// 更新或者新增学生信息
@@ -873,7 +886,7 @@
         }
 ```
 
-### PetaPoco分页获取信息Web.config
+<h4 id="PetaPoco分页获取信息Web.config">PetaPoco分页获取信息Web.config</h4>
 ```
     <add name="cls" providerName="System.Data.SqlClient" connectionString="Server=127.0.0.1;database=cls;uid=sa;pwd=sa" />
 ```
@@ -962,7 +975,7 @@ ApiControllerr:
         }
 ```
 
-### 多层数组结构的处理
+<h4 id="多层数组结构的处理">多层数组结构的处理</h4>
 ```
        public Biology  GetBiology(string BiologyName)
         {
@@ -1002,7 +1015,7 @@ ApiControllerr:
                 }
             }
 ```
-### 多层结构的api  详见OrderDetail
+<h4 id="多层结构的api">多层结构的api  详见OrderDetail</h4>
 ```
         private Database db = new Database("OrderDetail");
 
@@ -1060,7 +1073,7 @@ ApiControllerr:
             return orderDetail;
         }
 ```
-### Newtonsoft ： json与对象的相互转换
+<h4 id="Newtonsoft ： json与对象的相互转换">Newtonsoft ： json与对象的相互转换</h4>
 ```
 //JsonConvert需导入
 using Newtonsoft.Json;
@@ -1474,7 +1487,7 @@ using Newtonsoft.Json.Converters;
             return nnow;
         }
 ```
-### 插入或者更新一条信息： 表中存在该信息 则更新（先删除原来存在的  再插入新的数据） 表中不存在该数据 则添加
+<h4 id="插入或者更新一条信息">插入或者更新一条信息： 表中存在该信息 则更新（先删除原来存在的  再插入新的数据） 表中不存在该数据 则添加</h4>
 ```
         private Database db = new Database("Names");
 
@@ -1513,7 +1526,7 @@ using Newtonsoft.Json.Converters;
             return names;
         }
 ```
-### 常用复杂Sql语句
+<h4 id="常用复杂Sql语句">常用复杂Sql语句</h4>
 ```
 -- 数据存在则根据名称更新年龄  不存在则增加一条信息
 if exists(select * from t_Names where Name='sss')
@@ -1561,7 +1574,7 @@ select @@MAX_CONNECTIONS
 --返回最近一次插入的编号
 select @@IDENTITY
 ```
-### Nlog日志记录 
+<h4 id="Nlog日志记录">Nlog日志记录</h4>
 ##### 在项目NuGet程序包中搜索NLog并安装
 #### App.config/Web.config配置
 ```
@@ -1637,7 +1650,7 @@ select @@IDENTITY
             Console.Read();
         }
 ```
-### SuperSocket使用：文档：http://docs.supersocket.net/v1-6/zh-CN
+<h4 id="SuperSocket使用"> SuperSocket使用：文档：[http://docs.supersocket.net/v1-6/zh-CN](http://docs.supersocket.net/v1-6/zh-CN)</h4>
 ```
     /*
         注意事项：
@@ -1700,4 +1713,3 @@ select @@IDENTITY
         }
     }
 ```
-<a href="#VisualSVN serevr与tortoiseSVN client" rel="nofollow" target="_blank">使用Markdown语法增加的跳转到“前言”的链接</a></p>
