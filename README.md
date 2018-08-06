@@ -1,4 +1,16 @@
-﻿### c#泛型类与泛型参数
+﻿### windows下SVN版本控制VisualSVN serevr与tortoiseSVN client（类似mac上Cornerstone）的使用
+```
+1. TortoiseSVN 使用： https://blog.csdn.net/maplejaw_/article/details/52874348
+2. VisualSVN 使用：https://blog.csdn.net/fy_hanxu/article/details/52757745
+   
+   · 添加User / Group：1. VisualSVN右键点击Users / Groups 文件夹添加一个User/Group之后，右键仓库Properties添加User或者Group; 2.直接在Properties创建并添加；
+   · VisualSVN配置仓库连接URL(形如http://192.168.11.10:8080/svn/testRepo)：右击VisualSVN Server(Local) -> Network 
+   · CheckOut: VisualSVN右键点击需要CheckOut的仓库 -> CopyUrlToClipBoard -> 桌面右键SVN CheckOut
+   · Commit与Update: 桌面右键 SVN Commit / SVN Update
+   
+```
+
+### c#泛型类与泛型参数
 ```
            //集合与数组区别：1.长度可变 2.元素类型可不一致
             //List<T>  T:type 用来定义泛型类时的占位符 T出现的位置在实例化时可以使用任意的类型来替代
