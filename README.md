@@ -1,7 +1,7 @@
 ﻿### windows下SVN版本控制VisualSVN serevr与tortoiseSVN client（类似mac上Cornerstone）的使用
 ```
-1. TortoiseSVN 使用： ![https://blog.csdn.net/maplejaw_/article/details/52874348](https://blog.csdn.net/maplejaw_/article/details/52874348)
-2. VisualSVN 使用：![https://blog.csdn.net/fy_hanxu/article/details/52757745](https://blog.csdn.net/fy_hanxu/article/details/52757745)
+1. TortoiseSVN 使用： [https://blog.csdn.net/maplejaw_/article/details/52874348](https://blog.csdn.net/maplejaw_/article/details/52874348)
+2. VisualSVN 使用：[https://blog.csdn.net/fy_hanxu/article/details/52757745](https://blog.csdn.net/fy_hanxu/article/details/52757745)
    
    · 添加User / Group：1. VisualSVN右键点击Users / Groups 文件夹添加一个User/Group之后，右键仓库Properties添加User或者Group; 2.直接在Properties创建并添加；
    · VisualSVN配置仓库连接URL(形如http://192.168.11.10:8080/svn/testRepo)：右击VisualSVN Server(Local) -> Network 
