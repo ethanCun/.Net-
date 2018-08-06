@@ -1,0 +1,5 @@
+记录时间：2018-08-06 14:42:29,501 线程ID:[8] 日志级别：DEBUG 出错类：Log4NetDemo.Program property:[(null)] - 错误描述：调试
+记录时间：2018-08-06 14:42:29,542 线程ID:[8] 日志级别：INFO  出错类：Log4NetDemo.Program property:[(null)] - 错误描述：信息
+记录时间：2018-08-06 14:42:29,544 线程ID:[8] 日志级别：WARN  出错类：Log4NetDemo.Program property:[(null)] - 错误描述：警告
+记录时间：2018-08-06 14:42:29,544 线程ID:[8] 日志级别：ERROR 出错类：Log4NetDemo.Program property:[(null)] - 错误描述：错误
+记录时间：2018-08-06 14:42:29,545 线程ID:[8] 日志级别：FATAL 出错类：Log4NetDemo.Program property:[(null)] - 错误描述：致命错误

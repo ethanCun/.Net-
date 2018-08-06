@@ -1,0 +1,8 @@
+E:\Log4NetDemo\Log4NetDemo\bin\Debug\Log4NetDemo.exe.config
+E:\Log4NetDemo\Log4NetDemo\bin\Debug\Log4NetDemo.exe
+E:\Log4NetDemo\Log4NetDemo\bin\Debug\Log4NetDemo.pdb
+E:\Log4NetDemo\Log4NetDemo\bin\Debug\log4net.dll
+E:\Log4NetDemo\Log4NetDemo\bin\Debug\log4net.xml
+E:\Log4NetDemo\Log4NetDemo\obj\Debug\Log4NetDemo.csprojResolveAssemblyReference.cache
+E:\Log4NetDemo\Log4NetDemo\obj\Debug\Log4NetDemo.exe
+E:\Log4NetDemo\Log4NetDemo\obj\Debug\Log4NetDemo.pdb

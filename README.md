@@ -15,7 +15,8 @@
 <a href="#插入或者更新一条信息" rel="nofollow" target="_blank">12. 插入或者更新一条信息： 表中存在该信息 则更新（先删除原来存在的 再插入新的数据） 表中不存在该数据 则添加</a></p>
 <a href="#常用复杂Sql语句" rel="nofollow" target="_blank">13. 常用复杂Sql语句</a></p>
 <a href="#Nlog日志记录" rel="nofollow" target="_blank">14. Nlog日志记录</a></p>
-<a href="#SuperSocket使用" rel="nofollow" target="_blank">15. SuperSocket使用</a></p>
+<a href="#log4net日志记录" rel="nofollow" target="_blank">15. log4net日志记录</a></p>
+<a href="#SuperSocket使用" rel="nofollow" target="_blank">16. SuperSocket使用</a></p>
 
 
 <h4 id='VisualSVN serevr与tortoiseSVN client'>1. windows下SVN版本控制VisualSVN serevr与tortoiseSVN client（类似mac上Cornerstone）的使用</h4>
@@ -1697,10 +1698,168 @@ select @@IDENTITY
         }
 ```
 
+### <h4 id="log4net日志记录">15. log4net日志记录的使用<\h4>
+```
+App.config 配置
 
-<h4 id="SuperSocket使用">15.  SuperSocket使用：文档：[http://docs.supersocket.net/v1-6/zh-CN](http://docs.supersocket.net/v1-6/zh-CN)</h4>
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  
+  <!--log4net的使用-->
+  <configSections>
+    <section name="log4net" type="System.Configuration.IgnoreSectionHandler"/>
+  </configSections>
 
+  <appSettings>
+  </appSettings>
 
+  <log4net>
+    
+    <!--定义输出到文件中-->
+    <appender name="LogFileAppender" type="log4net.Appender.FileAppender">
+      <!--定义文件存放位置-->
+      <file value="E:\Log4NetDemo\Log4NetDemo\log.txt" />
+      <appendToFile value="true" />
+      <rollingStyle value="Date" />
+      <datePattern value="yyyyMMdd-HH:mm:ss" />
+      <layout type="log4net.Layout.PatternLayout">
+        <!--每条日志末尾的文字说明-->
+        <footer value="by czy" />
+        <!--输出格式-->
+        <!--样例：2008-03-26 13:42:32,111 [10] INFO  Log4NetDemo.MainClass [(null)] - info-->
+        <conversionPattern value="记录时间：%date 线程ID:[%thread] 日志级别：%-5level 出错类：%logger property:[%property{NDC}] - 错误描述：%message%newline" />
+      </layout>
+    </appender>
+    
+    <!--定义输出到控制台命令行中-->
+    <appender name="ConsoleAppender" type="log4net.Appender.ConsoleAppender">
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%date [%thread] %-5level %logger [%property{NDC}] - %message%newline" />
+      </layout>
+    </appender>
+    
+    <!--定义输出到windows事件中-->
+    <appender name="EventLogAppender" type="log4net.Appender.EventLogAppender">
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%date [%thread] %-5level %logger [%property{NDC}] - %message%newline" />
+      </layout>
+    </appender>
+    
+    <!--定义输出到数据库中，这里举例输出到Access数据库中，数据库为C盘的log4net.mdb-->
+    <appender name="AdoNetAppender_Access" type="log4net.Appender.AdoNetAppender">
+      <connectionString value="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:log4net.mdb" />
+      <commandText value="INSERT INTO LogDetails ([LogDate],[Thread],[Level],[Logger],[Message]) VALUES (@logDate, @thread, @logLevel, @logger,@message)" />
+      <!--定义各个参数-->
+      <parameter>
+        <parameterName value="@logDate" />
+        <dbType value="String" />
+        <size value="240" />
+        <layout type="log4net.Layout.PatternLayout">
+          <conversionPattern value="%date" />
+        </layout>
+      </parameter>
+      <parameter>
+        <parameterName value="@thread" />
+        <dbType value="String" />
+        <size value="240" />
+        <layout type="log4net.Layout.PatternLayout">
+          <conversionPattern value="%thread" />
+        </layout>
+      </parameter>
+      <parameter>
+        <parameterName value="@logLevel" />
+        <dbType value="String" />
+        <size value="240" />
+        <layout type="log4net.Layout.PatternLayout">
+          <conversionPattern value="%level" />
+        </layout>
+      </parameter>
+      <parameter>
+        <parameterName value="@logger" />
+        <dbType value="String" />
+        <size value="240" />
+        <layout type="log4net.Layout.PatternLayout">
+          <conversionPattern value="%logger" />
+        </layout>
+      </parameter>
+      <parameter>
+        <parameterName value="@message" />
+        <dbType value="String" />
+        <size value="240" />
+        <layout type="log4net.Layout.PatternLayout">
+          <conversionPattern value="%message" />
+        </layout>
+      </parameter>
+    </appender>
+    
+    <!--定义日志的输出媒介，下面定义日志以四种方式输出。也可以下面的按照一种类型或其他类型输出。-->
+    <root>
+      <!--文件形式记录日志-->
+      <appender-ref ref="LogFileAppender" />
+      <!--控制台控制显示日志-->
+      <appender-ref ref="ConsoleAppender" />
+      <!--Windows事件日志-->
+      <appender-ref ref="EventLogAppender" />
+      <!-- 如果不启用相应的日志记录，可以通过这种方式注释掉
+      <appender-ref ref="AdoNetAppender_Access" />
+      -->
+    </root>
+
+  </log4net>
+  
+    <startup> 
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5.2" />
+    </startup>
+</configuration>
+```
+```
+log4net的使用：
+
+using log4net;
+using System.Reflection;
+
+//注意下面的语句一定要加上，指定log4net使用.config文件来读取配置信息
+//如果是WinForm（假定程序为MyDemo.exe，则需要一个MyDemo.exe.config文件）
+//如果是WebForm，则从web.config中读取相关信息
+//表示直接从 app.config中读取配置即可
+//如果你只是一个简单的项目，那么在这个项目的 AssemblyInfo.cs文件上加上
+//[assembly: log4net.Config.XmlConfigurator(Watch=true)]即可。
+//[assembly: log4net.Config.XmlConfigurator(Watch = true)]
+
+namespace Log4NetDemo
+{
+    /// 说明：本程序演示如何利用log4net记录程序日志信息。log4net是一个功能著名的开源日志记录组件。
+    /// 利用log4net可以方便地将日志信息记录到文件、控制台、Windows事件日志和数据库中
+    /// （包括MS SQL Server, Access, Oracle9i,Oracle8i,DB2,SQLite）。
+    /// 下面的例子展示了如何利用log4net记录日志
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Log4net框架定义了一个叫做LogManager的类，用来管理所有的logger对象。它有一个GetLogger()静态方法，用我们提供的名字参数来检索已经存在的Logger对象。如果框架里不存在该Logger对象，它也会为我们创建一个Logger对象。代码如下所示：
+            //log4net.ILog log = log4net.LogManager.GetLogger("logger-name");
+            //通常来说，我们会以类（class）的类型（type）为参数来调用GetLogger()
+           ILog log = log4net.LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
+
+            log.Debug("调试");
+
+            log.Info("信息");
+
+            log.Warn("警告");
+
+            log.Error("错误");
+
+            log.Fatal("致命错误");
+
+            Console.WriteLine("命令执行完毕");
+            Console.Read();
+        }
+    }
+}
+
+```
+
+### <h4 id="SuperSocket使用">16.  SuperSocket使用：文档：[http://docs.supersocket.net/v1-6/zh-CN](http://docs.supersocket.net/v1-6/zh-CN)</h4>
 ```
     /*
         注意事项：
