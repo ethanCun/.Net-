@@ -1,6 +1,6 @@
 ﻿
 
-<h3 id='前言'>windows下SVN版本控制VisualSVN serevr与tortoiseSVN client（类似mac上Cornerstone）的使用</h3>
+<h3 id='VisualSVN serevr与tortoiseSVN client'>windows下SVN版本控制VisualSVN serevr与tortoiseSVN client（类似mac上Cornerstone）的使用</h3>
 
 
 ### windows下SVN版本控制VisualSVN serevr与tortoiseSVN client（类似mac上Cornerstone）的使用
@@ -1700,4 +1700,4 @@ select @@IDENTITY
         }
     }
 ```
-<a href="#前言" rel="nofollow" target="_blank">使用Markdown语法增加的跳转到“前言”的链接</a></p>
+<a href="#VisualSVN serevr与tortoiseSVN client" rel="nofollow" target="_blank">使用Markdown语法增加的跳转到“前言”的链接</a></p>
