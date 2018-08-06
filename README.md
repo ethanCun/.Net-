@@ -1698,7 +1698,7 @@ select @@IDENTITY
         }
 ```
 
-### <h4 id="log4net日志记录">15. log4net日志记录的使用<\h4>
+### <h4 id="log4net日志记录">15. log4net日志记录的使用</h4>
 ```
 App.config 配置
 
