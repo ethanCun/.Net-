@@ -1,5 +1,4 @@
-﻿### 学习笔记
-
+﻿
 <a href="#VisualSVN serevr与tortoiseSVN client" rel="nofollow" target="_blank">1. windows下SVN版本控制VisualSVN serevr与tortoiseSVN client（类似mac上Cornerstone）的使用</a></p>
 <a href="#泛型类与泛型参数" rel="nofollow" target="_blank">2. c#中的泛型类与泛型参数</a></p>
 <a href="#泛型类继承自普通类、普通类继承自泛型类、泛型类继承自泛型类的情况" rel="nofollow" target="_blank">3. c#中泛型类继承自普通类、普通类继承自泛型类、泛型类继承自泛型类的情况
