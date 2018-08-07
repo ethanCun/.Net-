@@ -1,0 +1,6 @@
+E:\GenericDemo3\GenericDemo3\bin\Debug\GenericDemo3.exe.config
+E:\GenericDemo3\GenericDemo3\obj\Debug\GenericDemo3.csprojResolveAssemblyReference.cache
+E:\GenericDemo3\GenericDemo3\bin\Debug\GenericDemo3.exe
+E:\GenericDemo3\GenericDemo3\bin\Debug\GenericDemo3.pdb
+E:\GenericDemo3\GenericDemo3\obj\Debug\GenericDemo3.exe
+E:\GenericDemo3\GenericDemo3\obj\Debug\GenericDemo3.pdb
