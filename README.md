@@ -17,6 +17,8 @@
 <a href="#log4net日志记录" rel="nofollow" target="_blank">15. log4net日志记录</a></p>
 <a href="#SuperSocket使用" rel="nofollow" target="_blank">16. SuperSocket使用</a></p>
 <a href="#c# 泛型默认值、继承、基类约束、接口约束、引用类型与值类型" rel="nofollow" target="_blank">17. c# 泛型默认值、继承、基类约束、接口约束、引用类型与值类型</a></p>
+<a href="#C#常用格式输出" rel="nofollow" target="_blank">18. C#常用格式输出</a></p>
+
 
 <h4 id='VisualSVN serevr与tortoiseSVN client'>1. windows下SVN版本控制VisualSVN serevr与tortoiseSVN client（类似mac上Cornerstone）的使用</h4>
 
@@ -2189,4 +2191,62 @@ namespace Log4NetDemo
             //D3<u> d2 = new D3<u>();
 
             D4<C2> d4 = new D4<C2>();
+```
+### <h4 id="C#常用格式输出">C#常用格式输出</h4>
+```
+static void Main()
+        {
+            Console.WriteLine("-------部分数值格式输出方式的示例--------");
+            Console.WriteLine("在宽度空间里靠左对齐：{0,-10}",99);
+            Console.WriteLine("在宽度空间里靠右对齐：{0,10}", 99);
+            Console.WriteLine("在宽度空间里靠左对齐：{0,-10}", "LLL");
+            Console.WriteLine("在宽度空间里靠右对齐：{0,10}", "RRR");
+            Console.WriteLine("货币-{0:C}{1:C4}",88.8,-888.8);
+            Console.WriteLine("10进制整数-{0:D5}",88);
+            Console.WriteLine("科学计数-{0:E}",888.8);
+            Console.WriteLine("固定小数点-{0:F3}",888.8888);
+            Console.WriteLine("浮点数-{0:G}",888.8888);
+            Console.WriteLine("数字格式-{0:N}",8888888.8);
+            Console.WriteLine("16进制格式-{0:X4}",88);
+
+            Console.WriteLine("--------常用日期格式----------");
+            DateTime datetime = DateTime.Now;
+            Console.WriteLine(datetime);
+            Console.WriteLine(datetime.ToString("yyyy-MM-dd hh:mm:ss"));
+            Console.WriteLine(datetime.ToString("yyyy-MM-dd HH:mm:ss"));
+            Console.WriteLine(datetime.ToString("yyyy-MM-dd"));
+            Console.WriteLine(datetime.ToString("yyyy-MM"));
+            Console.WriteLine(datetime.ToString("yyyy"));
+            Console.WriteLine(datetime.ToString("yyyy/MM/dd"));
+            Console.WriteLine(datetime.ToString("yyyy年MM月dd日"));
+            Console.WriteLine(datetime.ToString("yyyy年MM月"));
+            Console.WriteLine(datetime.ToString("yyyy年"));
+        }
+    }
+```
+```
+输出结果：
+-------部分数值格式输出方式的示例--------
+在宽度空间里靠左对齐：99
+在宽度空间里靠右对齐：        99
+在宽度空间里靠左对齐：LLL
+在宽度空间里靠右对齐：       RRR
+货币-￥88.80￥-888.8000
+10进制整数-00088
+科学计数-8.888000E+002
+固定小数点-888.889
+浮点数-888.8888
+数字格式-8,888,888.80
+16进制格式-0058
+--------常用日期格式----------
+2013/6/23 23:47:48
+2013-06-23 11:47:48
+2013-06-23 23:47:48
+2013-06-23
+2013-06
+2013
+2013/06/23
+2013年06月23日
+2013年06月
+2013年
 ```
