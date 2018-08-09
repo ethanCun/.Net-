@@ -2465,6 +2465,10 @@ static void Main()
         模型优先：
         ModelFirst: https://blog.csdn.net/u010028869/article/details/47134343
 
+            //注意：当我们的实体需要改变时，只需要在模型设计视图修改保存模型，
+            //此时实体类就会相应改变，
+            //然后选择“从模型生成到数据库”重新执行生成的脚本即可将变化同步到数据库。
+
         public static void ModelFisrt()
         {
             //实例化数据库上下文
