@@ -1,0 +1,6 @@
+F:\csharpProj\lambda-learn\lambda-learn\bin\Debug\lambda-learn.exe.config
+F:\csharpProj\lambda-learn\lambda-learn\bin\Debug\lambda-learn.exe
+F:\csharpProj\lambda-learn\lambda-learn\bin\Debug\lambda-learn.pdb
+F:\csharpProj\lambda-learn\lambda-learn\obj\Debug\lambda-learn.csprojResolveAssemblyReference.cache
+F:\csharpProj\lambda-learn\lambda-learn\obj\Debug\lambda-learn.exe
+F:\csharpProj\lambda-learn\lambda-learn\obj\Debug\lambda-learn.pdb
