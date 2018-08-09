@@ -81,6 +81,8 @@ Tips:
 
 14. SocketToll的使用 ： https://jingyan.baidu.com/article/c910274bfe8703cd361d2d9e.html
 
+15. 配置SQLServer，允许远程连接：https://www.cnblogs.com/weizhengLoveMayDay/p/3267756.html
+
 ```
 
 <h4 id='VisualSVN serevr与tortoiseSVN client'>1. windows下SVN版本控制VisualSVN serevr与tortoiseSVN client（类似mac上Cornerstone）的使用</h4>
