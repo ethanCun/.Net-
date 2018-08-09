@@ -21,8 +21,10 @@
 <a href="#c# 泛型默认值、继承、基类约束、接口约束、引用类型与值类型" rel="nofollow" target="_blank">17. c# 泛型默认值、继承、基类约束、接口约束、引用类型与值类型</a></p>
 <a href="#C#常用格式输出" rel="nofollow" target="_blank">18. C#常用格式输出</a></p>
 
-#### <h4>small notes</h4>
+
 ```
+Tips:
+
 1. windows10下打开sqlserver配置器的方法
    
     此电脑右键管理 - 》 展开服务于应用程序 -》 展开sqlserver配置器管理器 -》选择sqlserver网络配置 -》点击sqlexpress的协议 -》选择NamePipes、TCP
