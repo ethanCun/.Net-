@@ -1,0 +1,10 @@
+F:\csharpProj\EF-ModelFirst\EF-ModelFirst\bin\Debug\EF-ModelFirst.exe.config
+F:\csharpProj\EF-ModelFirst\EF-ModelFirst\bin\Debug\EF-ModelFirst.exe
+F:\csharpProj\EF-ModelFirst\EF-ModelFirst\bin\Debug\EF-ModelFirst.pdb
+F:\csharpProj\EF-ModelFirst\EF-ModelFirst\bin\Debug\EntityFramework.dll
+F:\csharpProj\EF-ModelFirst\EF-ModelFirst\bin\Debug\EntityFramework.SqlServer.dll
+F:\csharpProj\EF-ModelFirst\EF-ModelFirst\bin\Debug\EntityFramework.xml
+F:\csharpProj\EF-ModelFirst\EF-ModelFirst\bin\Debug\EntityFramework.SqlServer.xml
+F:\csharpProj\EF-ModelFirst\EF-ModelFirst\obj\Debug\EF-ModelFirst.csprojResolveAssemblyReference.cache
+F:\csharpProj\EF-ModelFirst\EF-ModelFirst\obj\Debug\EF-ModelFirst.exe
+F:\csharpProj\EF-ModelFirst\EF-ModelFirst\obj\Debug\EF-ModelFirst.pdb
