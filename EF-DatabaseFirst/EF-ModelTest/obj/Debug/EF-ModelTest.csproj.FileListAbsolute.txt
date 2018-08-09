@@ -1,0 +1,13 @@
+F:\csharpProj\EF-ModelTest\EF-ModelTest\bin\Debug\EF-ModelTest.exe.config
+F:\csharpProj\EF-ModelTest\EF-ModelTest\bin\Debug\EF-ModelTest.exe
+F:\csharpProj\EF-ModelTest\EF-ModelTest\bin\Debug\EF-ModelTest.pdb
+F:\csharpProj\EF-ModelTest\EF-ModelTest\bin\Debug\EntityFramework.dll
+F:\csharpProj\EF-ModelTest\EF-ModelTest\bin\Debug\EntityFramework.SqlServer.dll
+F:\csharpProj\EF-ModelTest\EF-ModelTest\bin\Debug\EntityFramework.xml
+F:\csharpProj\EF-ModelTest\EF-ModelTest\bin\Debug\EntityFramework.SqlServer.xml
+F:\csharpProj\EF-ModelTest\EF-ModelTest\obj\Debug\EF-ModelTest.csprojResolveAssemblyReference.cache
+F:\csharpProj\EF-ModelTest\EF-ModelTest\obj\Debug\EF-ModelTest.exe
+F:\csharpProj\EF-ModelTest\EF-ModelTest\obj\Debug\EF-ModelTest.pdb
+F:\csharpProj\EF-DatabaseFirst\EF-ModelTest\bin\Debug\EF-ModelTest.exe.config
+F:\csharpProj\EF-DatabaseFirst\EF-ModelTest\obj\Debug\EF-ModelTest.exe
+F:\csharpProj\EF-DatabaseFirst\EF-ModelTest\obj\Debug\EF-ModelTest.pdb

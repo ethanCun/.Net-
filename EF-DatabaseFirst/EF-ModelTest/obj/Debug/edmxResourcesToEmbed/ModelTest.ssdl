@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EFTestModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="t_Student">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="20" />
+    <Property Name="Height" Type="float" />
+    <Property Name="Weight" Type="float" />
+  </EntityType>
+  <EntityType Name="t_User">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="20" />
+    <Property Name="Sex" Type="nvarchar" MaxLength="10" />
+    <Property Name="Department" Type="nvarchar" MaxLength="20" />
+    <Property Name="Weight" Type="float" />
+  </EntityType>
+  <EntityContainer Name="EFTestModelStoreContainer">
+    <EntitySet Name="t_Student" EntityType="Self.t_Student" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="t_User" EntityType="Self.t_User" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
