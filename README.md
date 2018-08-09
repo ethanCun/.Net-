@@ -20,7 +20,7 @@
 <a href="#SuperSocket使用" rel="nofollow" target="_blank">16. SuperSocket使用</a></p>
 <a href="#c# 泛型默认值、继承、基类约束、接口约束、引用类型与值类型" rel="nofollow" target="_blank">17. c# 泛型默认值、继承、基类约束、接口约束、引用类型与值类型</a></p>
 <a href="#C#常用格式输出" rel="nofollow" target="_blank">18. C#常用格式输出</a></p>
-
+<a href="#Lambda表达式的使用" rel="nofollow" target="_blank">19. Lambda表达式的使用</a></p>
 
 ```
 Tips:
@@ -2314,4 +2314,102 @@ static void Main()
 2013年06月23日
 2013年06月
 2013年
+```
+
+### <h4 id="Lambda表达式的使用">19. Lambda表达式的使用</h4>
+```
+ //不带参数的Lambda表达式
+            DelLambdaOne one = () =>
+            {
+                return "one";
+            };
+
+            Console.WriteLine(one());
+```
+```
+            //带一个参数的Lambda表达式
+            DeleLambdaTwo two = p =>
+            {
+                Console.WriteLine(p);
+            };
+
+            two("带一个参数的Lambda表达式");
+```
+```
+            //带两个参数的Lambda表达式
+            DelLambdaThree three = (p1, p2) =>
+            {
+                return p1 + p2;
+            };
+
+            Console.WriteLine(three(10,20));
+```
+```
+            //Func与Lambda表达式
+
+        /// <summary>
+        /// Func和Lambda表达式一起用
+        /// </summary>
+        public static void LambdaFunc()
+        {
+            //Func和Lambda表达式一起用
+            Func<string, string, string> addStr = (p1, p2) =>
+            {
+                return p1 + " - " + p2;
+            };
+
+            Console.WriteLine(addStr("lambda表达式1", "lambda表达式2"));
+        }
+
+           LambdaFunc();
+```
+```
+
+            //where筛选
+            Console.WriteLine("===所有大于3的数字集合===");
+
+            //获取大于3的所有数字
+            List<int> List1 = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8 };
+            List<int> NewList1 = List1.Where(p => p > 3).ToList<int>() ;
+
+            foreach(int i in NewList1)
+            {
+                Console.WriteLine(i);
+            }
+```
+```
+            //select查找
+            Console.WriteLine("===名字的长度集合===");
+
+            //获取名字的长度集合
+            List<string> User = new List<string> { "zhangsan", "lisi", "wangwu", "zhaoliu" };
+            List<int> NewUser = User.Select(user => user.Length).ToList<int>();
+
+            foreach(int nameLen in NewUser)
+            {
+                Console.WriteLine(nameLen);
+            }
+```
+```
+        /// <summary>
+        /// linq(语言集成查询（Language Integrated Query）)和lambda一起的用法（部分）
+        /// </summary>
+        /// <returns></returns>
+        public static string LambdaAndEach()
+        {
+            List<int> retList = new List<int> { 1,2,3,4,5,6,7};
+            StringBuilder sbBuilder = new StringBuilder();
+            retList.ForEach(p =>
+            {
+                if (p == retList[retList.Count - 1])
+                {
+                    sbBuilder.Append("'" + p);
+                }
+                else
+                {
+                    sbBuilder.Append("'" + p + "',");
+                }
+            });
+            return sbBuilder.ToString();
+        }
 ```
