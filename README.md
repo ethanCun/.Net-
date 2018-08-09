@@ -1,4 +1,6 @@
 ﻿
+
+
 <a href="#VisualSVN serevr与tortoiseSVN client" rel="nofollow" target="_blank">1. windows下SVN版本控制VisualSVN serevr与tortoiseSVN client（类似mac上Cornerstone）的使用</a></p>
 <a href="#泛型类与泛型参数" rel="nofollow" target="_blank">2. c#中的泛型类与泛型参数</a></p>
 <a href="#泛型类继承自普通类、普通类继承自泛型类、泛型类继承自泛型类的情况" rel="nofollow" target="_blank">3. c#中泛型类继承自普通类、普通类继承自泛型类、泛型类继承自泛型类的情况
@@ -19,6 +21,63 @@
 <a href="#c# 泛型默认值、继承、基类约束、接口约束、引用类型与值类型" rel="nofollow" target="_blank">17. c# 泛型默认值、继承、基类约束、接口约束、引用类型与值类型</a></p>
 <a href="#C#常用格式输出" rel="nofollow" target="_blank">18. C#常用格式输出</a></p>
 
+#### <h4>small notes</h4>
+```
+1. windows10下打开sqlserver配置器的方法
+   
+    此电脑右键管理 - 》 展开服务于应用程序 -》 展开sqlserver配置器管理器 -》选择sqlserver网络配置 -》点击sqlexpress的协议 -》选择NamePipes、TCP
+   /IP启动；
+
+2.windows10下打开本地服务
+   
+   搜索程序services.msc点击打开
+
+3. IIS（Internet Information Service）的位置：控制面板 -》 管理工具 -》Internet Information Services (IIS)管理器
+
+   IIS发布web项目参考链接：https://jingyan.baidu.com/article/fedf073770f23335ac8977b1.html
+
+4. IIS的配置：控制面板 -》  程序和功能 -》点击启用或关闭Windows功能 -》 勾选Internet Infomation Services下面的所有功能-》点击确定部署
+
+5 webapi为接口添加注释， 右键项目属性 -》生成 -》勾选XML文档文件 -》设置为App_Data/XmlDocument.xml -》
+   关闭 -》来到Aero -》HelpPage -》 App_Start -》 HelpPageConfig.cs -》 打开方法名为config.SetDocumentationProvider方法的注释 -》
+   .xml文件的路径可以修改，只需要保证一致就行
+
+6.webAPi与mvc路由机制的区别：可以看看这篇文章：https://www.cnblogs.com/landeanfen/p/5501490.html
+
+7. sql去重查找单个字段所有信息：SELECT DISTINCT 字段名 FROM Orders 
+
+8 项目的部署：生成（重新生成解决方案） -》生成（发布...） -》或者右键项目 1：配置文件 自定义配置文件名称 2：连接publish method选择file system
+   	设置一个target location（这个路径与IIS的物理地址一致） 3.设置  4.预览点击发布  -》在IIS中添加一个网站 设置网站名称  应用程序池 物理路径
+	绑定ip地址和端口号， 点击确定
+
+9 webapi添加接口注释和测试功能 ： https://blog.csdn.net/a123_z/article/details/71078062
+	测试功能：需在 Areas\HelpPage\Views\Help\Api.cshtml文件最后面添加：
+	
+@Html.DisplayForModel("TestClientDialogs")
+@section Scripts {
+    <linktype ="text/css" href="~/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+    @Html.DisplayForModel("TestClientReferences")
+}
+
+10 关于webapi的返回类型，看这个网址就能了解一大半了：https://www.cnblogs.com/landeanfen/p/5501487.html#_label0
+
+11. MVC3中 ViewBag、ViewData和TempData的使用和区别： http://www.cnblogs.com/bianlan/archive/2013/01/11/2857105.html
+
+12. PetaPoco的使用：
+	先在Web.config <connectionStrings></connectionStrings>中连接数据库
+               <add name="books" providerName="System.Data.SqlClient" connectionString="server=127.0.0.1;database=books;uid=sa;pwd=sa" />
+	
+	定义DataBase: private Database db = new Database("books");
+
+	var sql = Sql.Builder.Select("*").From("mybook").Where("id>@0", 10).OrderBy("name asc");
+
+ 	var books = db.Query<book>(sql).ToList();
+
+13. NLog的使用：https://blog.csdn.net/dsnq2011/article/details/51920265
+
+14. SocketToll的使用 ： https://jingyan.baidu.com/article/c910274bfe8703cd361d2d9e.html
+
+```
 
 <h4 id='VisualSVN serevr与tortoiseSVN client'>1. windows下SVN版本控制VisualSVN serevr与tortoiseSVN client（类似mac上Cornerstone）的使用</h4>
 
