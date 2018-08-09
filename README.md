@@ -44,6 +44,8 @@ Tips:
    关闭 -》来到Aero -》HelpPage -》 App_Start -》 HelpPageConfig.cs -》 打开方法名为config.SetDocumentationProvider方法的注释 -》
    .xml文件的路径可以修改，只需要保证一致就行
 
+    ### 发布环境下为接口添加注释功能， 一定不能少了在App_Data下添加XmlDocument.xml文件， 不然会报错，这个文件找不到
+
 6.webAPi与mvc路由机制的区别：可以看看这篇文章：https://www.cnblogs.com/landeanfen/p/5501490.html
 
 7. sql去重查找单个字段所有信息：SELECT DISTINCT 字段名 FROM Orders 
