@@ -2421,9 +2421,12 @@ static void Main()
         }
 ```
 ### <h4 id="EF">20.  EF的简单使用</h4>
+#### <a href="https://blog.csdn.net/u010028869/article/details/47108205">DatabaseFirst: https://blog.csdn.net/u010028869/article/details/47108205</a>
+#### <a href="https://blog.csdn.net/u010028869/article/details/47134343">ModelFirst: https://blog.csdn.net/u010028869/article/details/47134343</a>
+
 ```
         数据库优先：
-        DatabaseFirst: https://blog.csdn.net/u010028869/article/details/47108205
+        
         public static void DatabaseFirst()
         {
             //注意：如果咱们的数据库表结构发生改变后，只需在模型设计视图空白处右键，
@@ -2463,7 +2466,7 @@ static void Main()
         }
 
         模型优先：
-        ModelFirst: https://blog.csdn.net/u010028869/article/details/47134343
+
 
             //注意：当我们的实体需要改变时，只需要在模型设计视图修改保存模型，
             //此时实体类就会相应改变，
