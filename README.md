@@ -21,6 +21,7 @@
 <a href="#c# 泛型默认值、继承、基类约束、接口约束、引用类型与值类型" rel="nofollow" target="_blank">17. c# 泛型默认值、继承、基类约束、接口约束、引用类型与值类型</a></p>
 <a href="#C#常用格式输出" rel="nofollow" target="_blank">18. C#常用格式输出</a></p>
 <a href="#Lambda表达式的使用" rel="nofollow" target="_blank">19. Lambda表达式的使用</a></p>
+<a href="#EF" rel="nofollow" target="_blank">20. EF的简单使用</a></p>
 
 ```
 Tips:
@@ -2417,5 +2418,68 @@ static void Main()
                 }
             });
             return sbBuilder.ToString();
+        }
+```
+### <h4 id="EF">20.  EF的简单使用</h4>
+```
+        数据库优先：
+        DatabaseFirst: https://blog.csdn.net/u010028869/article/details/47108205
+        public static void DatabaseFirst()
+        {
+            //注意：如果咱们的数据库表结构发生改变后，只需在模型设计视图空白处右键，
+            //选择“从数据库更新模型”接着按照向导操作即可将模型更新或者新增表。
+            //删除：数据库删除表之后，需要在模型设计视图里选择相应的模型右击选择："从模型删除"。
+
+            Console.WriteLine("使用Lanmbda表达式查询");
+
+            //实例化数据库上下文
+            EFTestEntities dbContext = new EFTestEntities();
+
+            //使用Lambda表达式查询数据
+            var users = dbContext.t_User.Where(p => p.Name.Length > 4).ToList();
+
+            if (users.Any())
+            {
+                foreach (var obj in users)
+                {
+                    Console.WriteLine("Name:{0}, Sex:{1}, Department:{2}", obj.Name, obj.Sex, obj.Department);
+                }
+            }
+
+            Console.WriteLine("使用Linq语句查询");
+
+            //linq语句查询
+            var users2 = from o in dbContext.t_User
+                         where o.Name == "lisi"
+                         select o;
+
+            if (users2.Any())
+            {
+                foreach (var obj in users2)
+                {
+                    Console.WriteLine("Name:{0}, Sex:{1}, Department:{2}", obj.Name, obj.Sex, obj.Department);
+                }
+            }
+        }
+
+        模型优先：
+        ModelFirst: https://blog.csdn.net/u010028869/article/details/47134343
+
+        public static void ModelFisrt()
+        {
+            //实例化数据库上下文
+            ModelTestContainer dbContext = new ModelTestContainer();
+
+            //找出数据库下UserSet表中所有名字长度不为0的用户
+            var users = dbContext.UserSet.Where(p => p.Name.Length > 4).ToList();
+
+            if (users.Any())
+            {
+                foreach (var obj in users)
+                {
+                    Console.WriteLine("Id:{0}, Name:{1}, Sex:{2}, Password:{3}",
+                        obj.Id, obj.Name, obj.Sex, obj.Password);
+                }
+            }
         }
 ```
