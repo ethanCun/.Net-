@@ -2318,7 +2318,13 @@ static void Main()
 
 ### <h4 id="Lambda表达式的使用">19. Lambda表达式的使用</h4>
 ```
- //不带参数的Lambda表达式
+        //定义三个委托 分别为不带参数 带1个参数 带2个参数
+        private delegate string DelLambdaOne();
+        private delegate void DeleLambdaTwo(string s);
+        private delegate int DelLambdaThree(int i, int j);
+```
+```
+ 	//不带参数的Lambda表达式
             DelLambdaOne one = () =>
             {
                 return "one";
