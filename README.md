@@ -22,7 +22,7 @@
 <a href="#C#常用格式输出" rel="nofollow" target="_blank">18. C#常用格式输出</a></p>
 <a href="#Lambda表达式的使用" rel="nofollow" target="_blank">19. Lambda表达式的使用</a></p>
 <a href="#EF" rel="nofollow" target="_blank">20. EF的简单使用</a></p>
-
+<a href="#HttpClient与HttpWebRequest" rel="nofollow" target="_blank">21. HttpClient与HttpWebRequest</a></p>
 ```
 Tips:
 
@@ -2490,5 +2490,227 @@ static void Main()
                         obj.Id, obj.Name, obj.Sex, obj.Password);
                 }
             }
+        }
+```
+### <h4 id="HttpClient与HttpWebRequest">21. HttpClient与HttpWebRequest</h4>
+```
+        /// <summary>
+        /// 带参数的HttpClient get请求
+        /// </summary>
+        /// <param name="param"></param>
+        /// <param name="url"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public object SendRequestWithHttpClientSignalParam2(Dictionary<string, string> param, string url)
+        {
+            HttpClient httpClient = new HttpClient();
+
+            var urlString = url + "?" + Tool.BuildParam(param, Encoding.UTF8);
+
+            var responseJson = httpClient.GetAsync(urlString).Result.Content.ReadAsStringAsync().Result;
+
+            return JsonConvert.DeserializeObject(responseJson);
+        }
+```
+```
+      /// <summary>
+        /// 数组包含字典情况：将参数按照1=1&2=2&3=3的方式拼接起来
+        /// </summary>
+        /// <param name="paramArray"></param>
+        /// <param name="encoding"></param>
+        /// <returns></returns>
+        public static string BuildParam(List<KeyValuePair<string, string>> paramArray, Encoding encoding)
+        {
+            string url = "";
+
+            //不过没有编码则用UTF8编码
+            if(encoding == null)
+            {
+                encoding = Encoding.UTF8;
+            }
+
+            if(paramArray == null || paramArray.Count == 0)
+            {
+                return "";
+            }
+            else
+            {
+                string paramStr = "";
+
+                foreach(var item in paramArray)
+                {
+                    paramStr += String.Format("{0}={1}&", Encode(item.Key, encoding), Encode(item.Value, encoding));
+                }
+
+                if (paramStr != "")
+                {
+                    paramStr = paramStr.TrimEnd('&');
+                }
+
+                url += paramStr;
+            }
+
+            return url;
+        }
+
+        /// <summary>
+        /// 字典 将键值对以&符号拼接起来
+        /// </summary>
+        /// <param name="param"></param>
+        /// <param name="encoding"></param>
+        /// <returns></returns>
+        public static string BuildParam(Dictionary<string, string> param, Encoding encoding)
+        {
+            if(encoding == null)
+            {
+                encoding = Encoding.UTF8;
+            }
+
+            string paramStr = "";
+
+            foreach(KeyValuePair<string, string> kv in param)
+            {
+                paramStr = String.Format("{0}={1}&", Encode(kv.Key, encoding), Encode(kv.Value, encoding));
+            }
+
+            paramStr = paramStr.TrimEnd('&');
+
+            return paramStr;
+        }
+```
+```
+     /// <summary>
+        /// 将字符串转成UTF8编码
+        /// </summary>
+        /// <param name="content"></param>
+        /// <param name="encoding"></param>
+        /// <returns></returns>
+        private static string Encode(string content, Encoding encoding)
+        {
+            if(encoding == null)
+            {
+                encoding = Encoding.UTF8;
+            }
+
+            return System.Web.HttpUtility.UrlEncode(content, encoding);
+        }
+```
+```
+        /// <summary>
+        /// 封装的HttpClient Post请求 发送一个键值对
+        /// </summary>
+        /// <param name="url"></param>
+        /// <param name="para"></param>
+        /// <returns></returns>
+        /// 
+        [HttpPost]
+        public object SendRe2(string url, Dictionary<string, string> para)
+        {
+            return HttpBase.NetWorkManager.PostParam<object>(url, para);
+        }
+```
+```
+       /// <summary>
+        /// HttpClient 封装的Post请求 带对象参数
+        /// </summary>
+        /// <param name="url"></param>
+        /// <param name="param"></param>
+        /// <returns></returns>
+        public static T PostParam<T>(string url, Dictionary<string, string> param) where T:class, new()
+        {
+            //https
+            if (url.StartsWith("https"))
+            {
+                System.Net.ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls;
+            }
+
+            //内容
+            HttpContent httpContent = new ObjectContent(typeof(Dictionary<string, string>), param, new JsonMediaTypeFormatter());
+
+            //headers
+            httpContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+
+            HttpClient httpClient = new HttpClient();
+
+            //post请求
+            HttpResponseMessage response = httpClient.PostAsync(url, httpContent).Result;
+
+            T result = default(T);
+
+            if (response.IsSuccessStatusCode)
+            {
+                string s = response.Content.ReadAsStringAsync().Result;
+
+                result = JsonConvert.DeserializeObject<T>(s);
+            }
+
+            return result;
+        }
+
+        /// <summary>
+        /// 封装的 HttpClient Post请求
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="requestUrl"></param>
+        /// <param name="param"></param>
+        /// <returns></returns>
+        public static T StartPostWithParam<T>(string requestUrl, object param) where T:class, new()
+        {
+            T result = default(T);
+
+            if (requestUrl == "" 
+                || requestUrl == null
+                || requestUrl == "{url}")
+            {
+                CommonHttpResult<string> res = new CommonHttpResult<string> { code = CommonResult.Exception, Message = "请求url为null", Data = "" };
+
+                return res as T;
+            }
+```
+```
+        /// <returns></returns>
+        [HttpPost]
+        public object SendPostRequestWithHttpWebRequest (string requestUrl, Dictionary<string, string> param)
+        {
+            //创建httpWebRequest对象 
+            //HttpWebRequest不能直接通过new来创建，只能通过WebRequest.Create(url)的方式来获得。 
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(requestUrl);
+
+            //请求类型 默认GET
+            request.Method = "post";
+
+            //现将字典转换成json字符串
+            string paramStr = JsonConvert.SerializeObject(param);
+
+            //转换输入参数的编码类型，获取bytep[] 数组
+            byte[] bytes = Encoding.UTF8.GetBytes(paramStr);
+
+            //内容长度
+            request.ContentLength = bytes.Length;
+
+            //
+            request.ContentType = "application/json";
+
+            using (Stream requestStream = request.GetRequestStream())
+            {
+                //输出流写入数据
+                requestStream.Write(bytes, 0, bytes.Count());
+            }
+
+            var httpResponse = (HttpWebResponse)request.GetResponse();
+
+            if(httpResponse.StatusCode != HttpStatusCode.OK)
+            {
+                throw new ApplicationException(string.Format("fail:{0}", httpResponse.StatusCode));
+            }
+
+            var responseJson = "";
+
+            using (StreamReader reader = new StreamReader(httpResponse.GetResponseStream(), Encoding.UTF8))
+            {
+                responseJson = reader.ReadToEnd();
+            }
+
+            return JsonConvert.DeserializeObject(responseJson);
         }
 ```
