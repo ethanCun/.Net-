@@ -23,6 +23,8 @@
 <a href="#Lambda表达式的使用" rel="nofollow" target="_blank">19. Lambda表达式的使用</a></p>
 <a href="#EF" rel="nofollow" target="_blank">20. EF的简单使用</a></p>
 <a href="#HttpClient与HttpWebRequest" rel="nofollow" target="_blank">21. HttpClient与HttpWebRequest</a></p>
+<a href="#Linq语句的使用" rel="nofollow" target="_blank">22. Linq语句的使用</a></p>
+
 ```
 Tips:
 
@@ -2713,4 +2715,42 @@ static void Main()
 
             return JsonConvert.DeserializeObject(responseJson);
         }
+```
+### <h4 id="Linq语句的使用">22. Linq语句的使用</h4>
+```
+           //简单Linq筛选语句
+            List<int> nums = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+            var qq = from num in nums
+                     where num > 5
+                     select num;
+
+            foreach (var q in qq)
+            {
+                Console.WriteLine(q);
+            }
+
+            Console.WriteLine("===============");
+
+            //多个关系条件
+            var pp = from num in nums
+                     where (num > 2) && (num % 2 == 0)
+                     select num;
+
+            foreach(var p in pp)
+            {
+                Console.WriteLine(p);
+            }
+
+            Console.WriteLine("================");
+
+            //Linq语句与Lambda语句的结合使用
+            var ss = nums.Where(p => p > 4 && p % 2 == 0);
+
+            foreach(var s in ss)
+            {
+                Console.WriteLine(s);
+            }
+
+            Console.ReadKey();
 ```
