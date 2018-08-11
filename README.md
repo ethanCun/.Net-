@@ -2752,5 +2752,9 @@ static void Main()
                 Console.WriteLine(s);
             }
 
+            //求出第一个数
+            var dd = nums.First(p => p > 2 || p % 2 == 0);
+
+            Console.WriteLine(dd);
             Console.ReadKey();
 ```
