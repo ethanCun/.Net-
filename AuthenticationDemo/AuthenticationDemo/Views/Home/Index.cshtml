@@ -1,0 +1,96 @@
+﻿<script src="~/Scripts/jquery-1.10.2.min.js">
+    var UserName = '@ViewBag.UserName';
+    var Ticket = '@ViewBag.Ticket';
+</script>
+
+<div>
+    <p>当前登录用户:'@ViewBag.UserName'</p>
+    <div>登录之后带验证的测试:<input type="button" value="点击测试" id="test"/></div>
+    <p id="content"></p>
+    <div>获取string1:<input value="获取字符串1" id="string1" type="button"/></div>
+    <p id="s1"></p>
+    <div>获取string2:<input value="获取字符串2" id="string2" type="button"/></div>
+    <p id="s2"></p>
+</div>
+
+<script>
+
+    $(document).ready(function () {
+
+        $("#test").click(function () {
+
+            //注意单引号 不然会报异常错误
+            var token = '@ViewBag.Ticket';
+
+            $.ajax({
+
+                type:"post",
+                url: "http://localhost:49204/api/AuthenticationDemo/TestAfterLogin",
+                beforeSend:function(xhr){
+
+                    //发送ajax请求之前向http的head里面加入验证信息
+                    xhr.setRequestHeader('Authorization', 'BasicAuth ' + token);
+                },
+                success: function (data, status) {
+
+                    console.log(JSON.stringify(data));
+
+                    if (status == "success") {
+
+                        $("#content").html(data);
+                    }
+                },
+                error: function (error) {
+
+                    console.log(error);
+                }
+            });
+        });
+
+
+        $("#string1").click(function () {
+
+            //注意单引号 不然会报异常错误
+            var token = '@ViewBag.Ticket';
+
+            $.ajax({
+
+                type: "get",
+                url: "http://localhost:49204/api/Info/string1",
+                beforeSend: function (xhr) {
+                    xhr.setRequestHeader('Authorization', 'BasicAuth ' + token);
+                },
+                success: function (data) {
+
+                    $("#s1").html(data);
+                },
+                error: function (error) {
+
+                }
+            });
+        });
+
+
+        $("#string2").click(function () {
+
+            //注意单引号 不然会报异常错误
+            var token = '@ViewBag.Ticket';
+
+            $.ajax({
+
+                type: "post",
+                url: "http://localhost:49204/api/Info/string2",
+                beforeSend: function (xhr) {
+                    xhr.setRequestHeader('Authorization', 'BasicAuth ' + token);
+                },
+                success: function (data) {
+
+                    $("#s2").html(data);
+                },
+                error: function (error) {
+
+                }
+            });
+        });
+    });
+</script>
