@@ -1,0 +1,6 @@
+F:\csharpProj\LinqDemo1\LinqDemo1\bin\Debug\LinqDemo1.exe.config
+F:\csharpProj\LinqDemo1\LinqDemo1\bin\Debug\LinqDemo1.exe
+F:\csharpProj\LinqDemo1\LinqDemo1\bin\Debug\LinqDemo1.pdb
+F:\csharpProj\LinqDemo1\LinqDemo1\obj\Debug\LinqDemo1.csprojResolveAssemblyReference.cache
+F:\csharpProj\LinqDemo1\LinqDemo1\obj\Debug\LinqDemo1.exe
+F:\csharpProj\LinqDemo1\LinqDemo1\obj\Debug\LinqDemo1.pdb
