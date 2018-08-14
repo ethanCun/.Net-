@@ -1,0 +1,6 @@
+F:\csharpProj\RegularExpressions\RegularExpressions\bin\Debug\RegularExpressions.exe.config
+F:\csharpProj\RegularExpressions\RegularExpressions\bin\Debug\RegularExpressions.exe
+F:\csharpProj\RegularExpressions\RegularExpressions\bin\Debug\RegularExpressions.pdb
+F:\csharpProj\RegularExpressions\RegularExpressions\obj\Debug\RegularExpressions.csprojResolveAssemblyReference.cache
+F:\csharpProj\RegularExpressions\RegularExpressions\obj\Debug\RegularExpressions.exe
+F:\csharpProj\RegularExpressions\RegularExpressions\obj\Debug\RegularExpressions.pdb
