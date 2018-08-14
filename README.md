@@ -2876,7 +2876,7 @@ static void Main()
             Console.WriteLine(dd);
             Console.ReadKey();
 ```
-### <h4 id="Authentication接口安全-Basic认证">Authentication接口安全-Basic认证 </h4>
+### <h4 id="Authentication接口安全-Basic认证">23. Authentication接口安全-Basic认证 </h4>
 ```
     public class AuthenticationDemoController : ApiController
     {
@@ -3508,7 +3508,7 @@ return System.Text.RegularExpressions.Regex.IsMatch(str_url,
 ```
 ### <h4 id="图片与文件的上传">25. 图片与文件的上传</h4>
 ```
- public class UploadController : ApiController
+    public class UploadController : ApiController
     {
         [HttpPost]
         //[Route("api/Upload")]
@@ -3551,7 +3551,7 @@ return System.Text.RegularExpressions.Regex.IsMatch(str_url,
     }
 ```
 ```
-public class WithExtensionMultipartFormDataStreamProvider: MultipartFormDataStreamProvider
+    public class WithExtensionMultipartFormDataStreamProvider: MultipartFormDataStreamProvider
     {
         public string guid { get; set; }
 
