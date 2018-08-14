@@ -3378,100 +3378,117 @@ x|y	匹配x或y。例如，“z|food”能匹配“z”或“food”。“(z|f)o
 ```
 ```
 常用正则表达式：
-//验证电话号码<br>public bool IsTelephone(string str_telephone)
+//验证电话号码
+public bool IsTelephone(string str_telephone)
 {
 return System.Text.RegularExpressions. 
 Regex.IsMatch(str_telephone, @"^(\d{3,4}-)?\d{6,8}$");
 }
+
 //验证密码
 public bool IsPassword(string str_password)
 {
 return System.Text.RegularExpressions. 
 Regex.IsMatch(str_password, @"[A-Za-z]+[0-9]");
 }
+
 //验证邮政编码
 public bool IsPostalcode(string str_postalcode)
 {
 return System.Text.RegularExpressions.
 Regex.IsMatch(str_postalcode, @"^\d{6}$");
 }
+
 //验证手机号码
 public bool IsHandset(string str_handset)
 {
 return System.Text.RegularExpressions.Regex. 
 IsMatch(str_handset, @"^[1][3-5]\d{9}$");
 }
+
 //验证身份证
 public bool IsIDcard(string str_idcard)
 {
 return System.Text.RegularExpressions.Regex. 
 IsMatch(str_idcard, @"(^\d{18}$)|(^\d{15}$)");
 }
+
 //验证小数格式
 public bool IsDecimal(string str_decimal)
 {
 return System.Text.RegularExpressions.Regex. 
 IsMatch(str_decimal, @"^[0-9]+\.[0-9]{2}$");
 }
+
 //验证月份
 public bool IsMonth(string str_Month)
 {
 return System.Text.RegularExpressions.Regex. 
 IsMatch(str_Month, @"^(0?[[1-9]|1[0-2])$");
 }
+
 //验证天数
 public bool IsDay(string str_day)
 {
 return System.Text.RegularExpressions.Regex. 
 IsMatch(str_day, @"^((0?[1-9])|((1|2)[0-9])|30|31)$");
 }
+
 //验证是否为数字
 public bool IsNumber(string str_number)
 {
 return System.Text.RegularExpressions.Regex. 
 IsMatch(str_number, @"^[0-9]*$");
 }
+
 //验证密码长度
 public bool IsPasswLength(string str_Length)
 {
 return System.Text.RegularExpressions.Regex. 
 IsMatch(str_Length, @"^\d{6,18}$");
 }
+
 //验证正整数
 public bool IsIntNumber(string str_intNumber)
 {
 return System.Text.RegularExpressions.Regex. 
 IsMatch(str_intNumber, @"^\+?[1-9][0-9]*$");
 }
+
 //验证大小写
 public bool IsUpChar(string str_UpChar)
 {
 return System.Text.RegularExpressions.Regex. 
 IsMatch(str_UpChar, @"^[A-Z]+$");
 }
+
 public bool IsLowerChar(string str_UpChar)
 {
 return System.Text.RegularExpressions.Regex. 
 IsMatch(str_UpChar, @"^[a-z]+$");
 }
+
 //验证是否为字母
 public bool IsLetter(string str_Letter)
 {
 return System.Text.RegularExpressions.Regex. 
 IsMatch(str_Letter, @"^[A-Za-z]+$");
 }
+
 //验证是否为中文
 public bool IsChinese(string str_chinese)
 {
 return System.Text.RegularExpressions.Regex. 
 IsMatch(str_chinese, @"^[\u4e00-\u9fa5]{1,}$");
 }
+
 //验证邮箱
 public bool IsEmail(string str_Email)
 {
 return System.Text.RegularExpressions.Regex.IsMatch(str_Email, 
 @"^(([\w\.]+)@(([[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))|((\w+\.?)+)@([a-zA-Z]{2,4}|[0-9]{1,3})(\.[a-zA-Z]{2,4}))$");
 }
+
 //验证IP
 public bool IPCheck(string IP)
 {
@@ -3479,6 +3496,7 @@ string num = @"(25[0-5]|2[0-4]\d|[0-1]\d{2}|[1-9]?\d)";
 return Regex.IsMatch(IP, 
 ("^" + num + "\\." + num + "\\." + num + "\\." + num + "$"));
 }
+
 //验证Url
 public bool IsUrl(string str_url)
 {
