@@ -2874,7 +2874,7 @@ static void Main()
             Console.WriteLine(dd);
             Console.ReadKey();
 ```
-### <h4>Authentication接口安全-Basic认证 </h4>
+### <h4 id="Authentication接口安全-Basic认证">Authentication接口安全-Basic认证 </h4>
 ```
     public class AuthenticationDemoController : ApiController
     {
