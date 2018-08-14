@@ -26,6 +26,8 @@
 <a href="#Linq语句的使用" rel="nofollow" target="_blank">22. Linq语句的使用</a></p>
 <a href="#Authentication接口安全-Basic认证" rel="nofollow" target="_blank">23. Authentication接口安全-Basic认证</a></p>
 <a href="#正则表达式" rel="nofollow" target="_blank">24. c#正则表达式</a></p>
+<a href="#图片与文件的上传" rel="nofollow" target="_blank">25. 图片与文件的上传</a></p>
+
 ```
 Tips:
 
@@ -3503,4 +3505,125 @@ public bool IsUrl(string str_url)
 return System.Text.RegularExpressions.Regex.IsMatch(str_url, 
 @"http(s)?://([\w-]+\.)+[\w-]+(/[\w- ./?%&=]*)?");
 }
+```
+### <h4 id="图片与文件的上传">25. 图片与文件的上传</h4>
+```
+ public class UploadController : ApiController
+    {
+        [HttpPost]
+        //[Route("api/Upload")]
+        public async Task<string> Upload(string guid)
+        {
+            if (!Request.Content.IsMimeMultipartContent())
+            {
+                throw new HttpResponseException(HttpStatusCode.UnsupportedMediaType);
+            }
+            
+            string UploadFilePath = HostingEnvironment.MapPath("~/Upload");
+
+            //如果路径不存在 创建路径
+            if (Directory.Exists(UploadFilePath))
+            {
+                Directory.CreateDirectory(UploadFilePath);
+            }
+
+            List<string> files = new List<string>();
+
+            var provider = new WithExtensionMultipartFormDataStreamProvider(UploadFilePath, guid);
+
+            try
+            {
+                //读取data
+                await Request.Content.ReadAsMultipartAsync(provider);
+
+                foreach (var file in provider.FileData)
+                {
+                    files.Add(Path.GetFileName(file.LocalFileName));
+                }
+            }
+            catch
+            {
+                throw;
+            }
+
+            return string.Join(",", files);
+        }
+    }
+```
+```
+public class WithExtensionMultipartFormDataStreamProvider: MultipartFormDataStreamProvider
+    {
+        public string guid { get; set; }
+
+        public WithExtensionMultipartFormDataStreamProvider(string rootPath, string guidStr):base(rootPath)
+        {
+            guid = guidStr;
+        }
+
+        public override string GetLocalFileName(HttpContentHeaders headers)
+        {
+            //IsNullOrWhiteSpace:指示指定的字符串是 null、空还是仅由空白字符组成
+            //返回指定的路径字符串的扩展名: Path.GetExtension
+            string extension = !string.IsNullOrWhiteSpace(headers.ContentDisposition.FileName) ?
+                Path.GetExtension(GetValidFileName(headers.ContentDisposition.FileName)) : "";
+
+            return guid + extension;
+        }
+
+        private string GetValidFileName(string filePath)
+        {
+            //获取包含不允许在文件名中使用的字符的数组
+            char[] invalids = Path.GetInvalidFileNameChars();
+            //StringSplitOptions.RemoveEmptyEntries:返回值不包括含有空字符串的数组元素
+            return string.Join("_", filePath.Split(invalids, StringSplitOptions.RemoveEmptyEntries)).TrimEnd('.');
+        }
+    }
+```
+```
+前端：
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+
+<form id="UploadForm">
+
+    <p>指定文件名 ：<input type="text" name="filename" value="" id="filename"/></p>
+    <p>请选择需要上传的文件：<input type="file" name="file" /></p>
+
+    <input type="button" value="上传" onclick="upload()" />
+</form>
+
+<script>
+
+    function upload() {
+
+        //序列化表单
+        //$("form").serialize()和 new FormData($('#uploadForm')[0])都是序列化表单
+        //序列化表单，$("form").serialize()只能序列化数据，不能序列化文件
+        var formData = new FormData($("#UploadForm")[0]);
+        //$("#UploadForm").serialize();
+
+        console.log(formData);
+        console.log($("#UploadForm").serialize());
+
+        $.ajax({
+
+            url: "http://localhost:62277/Api/Upload/Upload?guid="+$("#filename").val(),
+            data: formData,
+            type: "POST",
+            async: false,
+            cache: false,
+            contentType: false,
+            processData: false,
+            success: function (data) {
+
+                alert(data);
+            },
+            error: function (error) {
+
+                alert(error);
+            }
+        })
+    }
+
+
+</script>
 ```
