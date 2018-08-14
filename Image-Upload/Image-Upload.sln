@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Image-Upload", "Image-Upload\Image-Upload.csproj", "{74E7F708-90BF-4107-83CB-F5D3ED7F0C5B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{74E7F708-90BF-4107-83CB-F5D3ED7F0C5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74E7F708-90BF-4107-83CB-F5D3ED7F0C5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74E7F708-90BF-4107-83CB-F5D3ED7F0C5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74E7F708-90BF-4107-83CB-F5D3ED7F0C5B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
