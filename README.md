@@ -25,7 +25,7 @@
 <a href="#HttpClient与HttpWebRequest" rel="nofollow" target="_blank">21. HttpClient与HttpWebRequest</a></p>
 <a href="#Linq语句的使用" rel="nofollow" target="_blank">22. Linq语句的使用</a></p>
 <a href="#Authentication接口安全-Basic认证" rel="nofollow" target="_blank">23. Authentication接口安全-Basic认证</a></p>
-<a href="正则表达式" rel="nofollow" target="_blank">24. c#正则表达式</a></p>
+<a href="#正则表达式" rel="nofollow" target="_blank">24. c#正则表达式</a></p>
 ```
 Tips:
 
