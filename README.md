@@ -27,7 +27,7 @@
 <a href="#Authentication接口安全-Basic认证" rel="nofollow" target="_blank">23. Authentication接口安全-Basic认证</a></p>
 <a href="#正则表达式" rel="nofollow" target="_blank">24. c#正则表达式</a></p>
 <a href="#图片与文件的上传" rel="nofollow" target="_blank">25. 图片与文件的上传</a></p>
-
+<a href="#Base64与Image的互相转换" rel="nofollow" target="_blank">26. Base64与Image的互相转换, 生成头像路径 并保存到sqlserver</a></p>
 ```
 Tips:
 
@@ -3626,4 +3626,189 @@ return System.Text.RegularExpressions.Regex.IsMatch(str_url,
 
 
 </script>
+```
+### <h4 id="Base64与Image的互相转换">26. Base64与Image的互相转换, 生成头像路径 并保存到sqlserver</h4>
+```
+       /// <summary>
+        /// Base64转Image
+        /// </summary>
+        /// <param name="ImageName"></param>
+        /// <param name="base64Str"></param>
+        /// 
+        [HttpPost]
+        public CommonResult<string> Base64ToImage(ImageConvert Model)
+        {
+            CommonResult<string> res = ImageBase64Convert<string>.Base64StringToImage(Model.Name, Model.ImageBase64Str);
+
+            if(res.Code == Code.Success)
+            {
+                //插入数据库
+                Client client = new Client();
+                client.Name = Model.Name;
+                client.Avator = res.Message;
+
+                object obj = db.Insert("client_info", "Id", client);
+
+                if((int)obj > 0)
+                {
+                    Console.WriteLine("新增成功");
+                }
+                else
+                {
+                    Console.WriteLine("新增失败");
+                }
+            }
+
+            return res;
+        }
+
+        /// <summary> 
+        /// Image转Base64字符串 app
+        /// </summary>
+        /// <param name="ImagePath"></param>
+        /// <returns></returns>
+        /// 
+        [HttpPost]
+        public CommonResult<string> ImageToBase64Str(string Name)
+        {
+
+            CommonResult<string> res = ImageBase64Convert<string>.ImageToBase64String<string>(Name);
+
+            return res;
+        }
+
+        /// <summary>
+        /// 获取用户信息
+        /// </summary>
+        /// <param name="Name"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public Client GetClientInfo(string Name)
+        {
+            Client client = db.SingleOrDefault<Client>("select * from client_info where Name=" + "'" + Name+"'");
+
+            return client;
+        }
+```
+```
+#### Image与Base64的互相转换
+    public class ImageBase64Convert<T>
+    {
+        /// <summary>
+        /// base64转Image
+        /// </summary>
+        /// <param name="filePath"></param>
+        /// <param name="base64Str"></param>
+        public static CommonResult<T> Base64StringToImage(string Name, string base64Str)
+        {
+            CommonResult<T> result = new CommonResult<T> { Code = Code.Success, Message = "", Result = default(T) };
+
+            try
+            {
+                string inputStr = base64Str;
+
+                //将base64转成byte[]
+                byte[] bytes = Convert.FromBase64String(inputStr);
+
+                //bytes -> MemoryStream
+                MemoryStream ms = new MemoryStream(bytes);
+
+                //MemoryStream -> Bitmap
+                Bitmap bmap = new Bitmap(ms);
+
+                //保存图片到指定路径
+                bmap.Save(HttpContext.Current.Server.MapPath(@"~/Images/" + Name + ".jpg"), 
+                    System.Drawing.Imaging.ImageFormat.Jpeg);
+
+                ms.Close();
+
+                result.Message = WebBase.GetRootPath() + @"Images/" + Name + ".jpg";
+
+                return result;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message.ToString());
+
+                result.Code = Code.Failed;
+                result.Message = "失败";
+
+                return result;
+            }
+        }
+
+
+        /// <summary>
+        /// 图片转base64
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="ImageName"></param>
+        /// <returns></returns>
+        public static CommonResult<T> ImageToBase64String<T>(string ImageName) where T:class
+        {
+            CommonResult<T> result = new CommonResult<T> { Code = Code.Success, Message = "", Result = default(T)};
+
+            string path1 = HttpContext.Current.Server.MapPath(@"~/Images/" + ImageName);
+
+            try
+            {
+                //Image途径实例化位图
+                Bitmap bmap = new Bitmap(path1);
+
+                //内存流
+                MemoryStream ms = new MemoryStream();
+
+                //将图片以jpeg形式 保存到内存流中
+                bmap.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+
+                //实例化内存流长度的byte数组
+                byte[] arr = new byte[ms.Length];
+
+                //设置内存流读的起始位置
+                ms.Position = 0;
+
+                //读取
+                ms.Read(arr, 0 , (int)ms.Length);
+
+                ms.Close();
+
+                string base64 = Convert.ToBase64String(arr);
+
+                result.Result = base64 as T;
+                result.Message = "成功";
+
+                return result;
+
+            }catch(Exception e)
+            {
+                Console.WriteLine(e.Message.ToString());
+
+                result.Code = Code.Failed;
+                result.Message = "失败";
+
+                return result;
+            }
+        }
+
+    }
+```
+```
+           /// <summary>
+          /// 得到当前网站的根地址
+          /// </summary>
+          /// <returns></returns>
+          public static string GetRootPath()
+          {
+              // 是否为SSL认证站点
+              string secure = HttpContext.Current.Request.ServerVariables["HTTPS"];
+              string httpProtocol = (secure == "on" ? "https://" : "http://");
+
+             // 服务器名称
+             string serverName = HttpContext.Current.Request.ServerVariables["Server_Name"];
+             string port = HttpContext.Current.Request.ServerVariables["SERVER_PORT"];
+
+             // 应用服务名称
+             string applicationName = HttpContext.Current.Request.ApplicationPath;
+             return httpProtocol + serverName + (port.Length > 0 ? ":" + port : string.Empty) + applicationName;
+         }
 ```
