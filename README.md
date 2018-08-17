@@ -28,6 +28,8 @@
 <a href="#正则表达式" rel="nofollow" target="_blank">24. c#正则表达式</a></p>
 <a href="#图片与文件的上传" rel="nofollow" target="_blank">25. 图片与文件的上传</a></p>
 <a href="#Base64与Image的互相转换" rel="nofollow" target="_blank">26. Base64与Image的互相转换, 生成头像路径 并保存到sqlserver</a></p>
+<a href="#JPush" rel="nofollow" target="_blank">27. Jpush</a></p>
+
 ```
 Tips:
 
@@ -3826,4 +3828,141 @@ return System.Text.RegularExpressions.Regex.IsMatch(str_url,
              string applicationName = HttpContext.Current.Request.ApplicationPath;
              return httpProtocol + serverName + (port.Length > 0 ? ":" + port : string.Empty) + applicationName;
          }
+```
+### </h4 id="JPush">27. JPush</h4>
+```
+### web.config配置
+```
+    <!-- 极光推送配置 -->
+    <add key="JPushAppKey" value="354003058a25b14234XXXX" />
+    <add key="JPushMasterSecret" value="2e469438a8d9e9XXXX" />
+    <add key="JPushIOSProd" value="false" />
+```
+   public class Jpush
+    {
+        public static string AppKey = ConfigurationManager.AppSettings["JPushAppKey"];
+        public static string Master_Secret = ConfigurationManager.AppSettings["JPushMasterSecret"];
+
+        #region 广播
+        /// <summary>
+        /// 全员广播
+        /// </summary>
+        /// <param name="title">广播标题</param>
+        /// <param name="content">广播内容</param>
+        /// <param name="json">json数据</param>
+        /// <returns></returns>
+        public static string JPushAll(string title, string content, Dictionary<string, object> json)
+        {
+            JPushClient jpushClient = new JPushClient(AppKey, Master_Secret);
+
+            PushPayload payload = new PushPayload();
+            payload.Platform = "all";
+            payload.Audience = "all";
+
+            Notification noti = new Notification();
+            noti.Alert = content;
+            noti.Android = new Android() { Alert = content, Title = title, Extras = json };
+            noti.IOS = new IOS() { Alert = content, Category = title, Extras = json };
+            payload.Notification = noti;
+
+            Jiguang.JPush.Model.HttpResponse response = jpushClient.SendPush(payload);
+
+            return response.Content;
+        }
+
+        /// <summary>
+        /// 指定别名广播
+        /// </summary>
+        /// <param name="title">标题</param>
+        /// <param name="content">内容</param>
+        /// <param name="json">推送内容</param>
+        /// <param name="aliases">别名集合</param>
+        /// <returns></returns>
+        public static string JPushAliases(string title, string content, Dictionary<string, object> json, ArrayList aliases)
+        {
+            JPushClient jpushClient = new JPushClient(AppKey, Master_Secret);
+
+            PushPayload payload = new PushPayload();
+            payload.Platform = "all";
+
+            Dictionary<string, ArrayList> audis = new Dictionary<string, ArrayList>();
+            audis.Add("alias", aliases);
+            payload.Audience = audis;
+
+            Notification noti = new Notification();
+            noti.Alert = title;
+            noti.Android = new Android() { Title = title, Alert = content, Extras = json };
+            noti.IOS = new IOS() { Alert = content, Category = title, Extras = json };
+            payload.Notification = noti;
+
+            Jiguang.JPush.Model.HttpResponse response = jpushClient.SendPush(payload);
+
+            return response.Content;
+        }
+        #endregion
+
+        #region 消息
+        /// <summary>
+        /// 全员消息
+        /// </summary>
+        /// <param name="title">消息标题</param>
+        /// <param name="content">消息内容</param>
+        /// <param name="json">json数据</param>
+        /// <returns></returns>
+        public static string JPushMessageAll(string title, string content, Dictionary<string, object> json)
+        {
+            JPushClient jpushClient = new JPushClient(AppKey, Master_Secret);
+
+            PushPayload payload = new PushPayload();
+            payload.Platform = "all";
+            payload.Audience = "all";
+
+            Message msg = new Message();
+            msg.Content = content;
+            msg.Title = title;
+            msg.Extras = json;
+            msg.ContentType = "text";
+
+            payload.Message = msg;
+
+            Jiguang.JPush.Model.HttpResponse response = jpushClient.SendPush(payload);
+
+            return response.Content;
+        }
+
+        /// <summary>
+        /// 别名消息
+        /// </summary>
+        /// <param name="title">消息标题</param>
+        /// <param name="content">消息内容</param>
+        /// <param name="json">json数据</param>
+        /// <param name="aliases">别名集合</param>
+        /// <returns></returns>
+        public static string JPushMessageAliases(string title, string content, Dictionary<string, object> json, ArrayList aliases)
+        {
+            JPushClient jpushClient = new JPushClient(AppKey, Master_Secret);
+
+            PushPayload payload = new PushPayload();
+            payload.Platform = "all";
+
+            Dictionary<string, ArrayList> aliasSet = new Dictionary<string, ArrayList>();
+            aliasSet.Add("alias", aliases);
+            payload.Audience = aliasSet;
+
+            Message msg = new Message();
+            msg.ContentType = "text";
+            msg.Title = title;
+            msg.Content = content;
+            msg.Extras = json;
+
+            payload.Message = msg;
+
+            Jiguang.JPush.Model.HttpResponse response = jpushClient.SendPush(payload);
+
+            return response.Content;
+        }
+
+        #endregion
+
+    }
 ```
