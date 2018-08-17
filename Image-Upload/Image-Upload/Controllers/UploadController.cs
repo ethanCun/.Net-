@@ -126,11 +126,26 @@ namespace Image_Upload.Controllers
         /// <param name="Name"></param>
         /// <returns></returns>
         [HttpPost]
-        public Client GetClientInfo(string Name)
+        public CommonResult<Client> GetClientInfo(string Name)
         {
-            Client client = db.SingleOrDefault<Client>("select * from client_info where Name=" + "'" + Name+"'");
+            CommonResult<Client> clientInfo = new CommonResult<Client> { Code = Code.Success, Message = "", Result = default(Client) };
 
-            return client;
+            Client client = db.SingleOrDefault<Client>("select * from client_info where Name=@0", Name);
+
+            if(client == null)
+            {
+                clientInfo.Result = null;
+                clientInfo.Code = Code.Failed;
+                clientInfo.Message = "失败";
+            }
+            else
+            {
+                clientInfo.Result = client;
+                clientInfo.Code = Code.Success;
+                clientInfo.Message = "成功";
+            }
+
+            return clientInfo;
         }
 
         /// <summary>
