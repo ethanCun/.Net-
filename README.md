@@ -29,6 +29,7 @@
 <a href="#图片与文件的上传" rel="nofollow" target="_blank">25. 图片与文件的上传</a></p>
 <a href="#Base64与Image的互相转换" rel="nofollow" target="_blank">26. Base64与Image的互相转换, 生成头像路径 并保存到sqlserver</a></p>
 <a href="#JPush" rel="nofollow" target="_blank">27. Jpush</a></p>
+<a href="#Redis" rel="nofollow" target="_blank">28. Redis:一个开源的使用ANSI C语言编写、遵守BSD协议、支持网络、可基于内存亦可持久化的日志型、Key-Value数据库</a></p>
 
 ```
 Tips:
@@ -3965,4 +3966,169 @@ return System.Text.RegularExpressions.Regex.IsMatch(str_url,
         #endregion
 
     }
+```
+### <h4 id="Redis">Redis:一个开源的使用ANSI C语言编写、遵守BSD协议、支持网络、可基于内存亦可持久化的日志型、Key-Value数据库</h4>
+```
+一个好用的Redis客户端工具：
+<a href="https://pan.baidu.com/s/1i4TOJU9">redisclient-win32.x86.1.5</a>
+```
+```
+简介：
+
+REmote DIctionary Server(Redis) 是一个由Salvatore Sanfilippo写的key-value存储系统。
+
+Redis是一个开源的使用ANSI C语言编写、遵守BSD协议、支持网络、可基于内存亦可持久化的日志型、Key-Value数据库，并提供多种语言的API。
+
+它通常被称为数据结构服务器，因为值（value）可以是 字符串(String), 哈希(Map), 列表(list), 集合(sets) 和 有序集合(sorted sets)等类型。
+```
+```
+特点与优势：
+
+Redis支持数据的持久化，可以将内存中的数据保存在磁盘中，重启的时候可以再次加载进行使用。
+Redis不仅仅支持简单的key-value类型的数据，同时还提供list，set，zset，hash等数据结构的存储。
+Redis支持数据的备份，即master-slave模式的数据备份。
+
+性能极高 – Redis能读的速度是110000次/s,写的速度是81000次/s 。
+丰富的数据类型 – Redis支持二进制案例的 Strings, Lists, Hashes, Sets 及 Ordered Sets 数据类型操作。
+原子 – Redis的所有操作都是原子性的，意思就是要么成功执行要么失败完全不执行。单个操作是原子性的。多个操作也支持事务，即原子性，通过MULTI和EXEC指令包起来。
+丰富的特性 – Redis还支持 publish/subscribe, 通知, key 过期等等特性。
+```
+```
+Windows下安装Redis: 
+<a href="https://github.com/MSOpenTech/redis/releases">https://github.com/MSOpenTech/redis/releases</a>
+
+运行Redis:
+1. cd到Redis安装目录下：  运行 redis-server.exe redis.windows.conf
+2. 另启一个cmd窗口，原来的不要关闭，不然就无法访问服务端了;  cd到Redis安装目录下： redis-cli.exe -h 127.0.0.1 -p 6379
+```
+```
+Redis命令：
+
+如果需要在远程 redis 服务上执行命令，同样我们使用的也是 redis-cli 命令： redis-cli -h host -p port -a password
+
+1. 键（Key）：
+    设值： set czy "ethan"
+    取值： get czy
+    删除： del czy
+    是否存在：exists czy
+
+2. 字符串(String):
+    设值：set czy "a iOS developer"
+    取值：get czy
+    删除： del czy
+    是否存在：exists czy
+    返回指定子字符串：getrange czy 0 10
+    末尾拼接字符串：append czy "and a c# developer"
+    返回长度：strlen czy
+
+3. 哈希(Hash):
+    Redis hash 是一个string类型的field和value的映射表，hash特别适合用于存储对象。
+    Redis 中每个 hash 可以存储 232 - 1 键值对（40多亿）。
+    
+    设值：hmset czy name "ethan" des "a iOS and c# developer" location "changsha"
+    设值当字段： hset czy des iOS
+    取值所有：hgetall czy
+    取值单个字段：hget czy des
+    是否存在：hexists czy des
+    获取所有字段: hkeys czy
+    获取所有字段数量：hlen czy
+    删除某个字段：hdel czy name
+
+4. 列表(List):
+    设值： lpush czy ios c# changsha
+    取值： lrange czy 0 10
+    移除第一个元素：blpop czy 0 (0:超时时间)
+    移除最后一个元素：btpop czy 0 (0:超时时间)
+    获取指定index元素：lindex czy 0
+    在指定元素前后插入新元素：linsert  czy before(after) ethan c# 表示在ethan前/后面插入c#
+    设值指定index元素的值：lset czy 0 iOS
+    获取List长度：llen czy
+    删除列表元素： lrem czy 1 ethan  (1:移除的次数  ethan:列表内容)
+
+5. 集合(Set):
+    Redis 的 Set 是 String 类型的无序集合。集合成员是唯一的，这就意味着集合中不能出现重复的数据。
+
+   设值：sadd czy ethan iOS c# changsha
+   取值：smembers czy
+   获取集合数量： scard czy
+   移除最后一个元素： spop czy
+   移除指定元素：srem czy c#
+
+6. 有序集合(sorted set):
+   Redis 有序集合和集合一样也是string类型元素的集合,且不允许重复的成员。
+   不同的是每个元素都会关联一个double类型的分数。redis正是通过分数来为集合中的成员进行从小到大的排序。
+   有序集合的成员是唯一的,但分数(score)却可以重复。
+   集合是通过哈希表实现的，所以添加，删除，查找的复杂度都是O(1)。 集合中最大的成员数为 232 - 1 (4294967295, 每个集合可存储40多亿个成员)。
+   
+   设值：zadd czy 1 ethan  (1:score)
+   取值：zrange czy 0 10
+   获取集合数量：  zcard czy
+   移除指定元素：zrem czy ethan
+```
+```
+Redis 发布订阅(pub/sub)：
+一种消息通信模式：发送者(pub)发送消息，订阅者(sub)接收消息。
+
+发送消息： publish czy "this is a test message"
+订阅：subscribe czy
+退订：unsubscribe czy
+```
+```
+Redis 事务可以一次执行多个命令， 并且带有以下两个重要的保证：
+
+批量操作在发送 EXEC 命令前被放入队列缓存。
+收到 EXEC 命令后进入事务执行，事务中任意命令执行失败，其余的命令依然被执行。
+在事务执行过程，其他客户端提交的命令请求不会插入到事务执行命令序列中。
+
+127.0.0.1:6379> multi //标记一个事务块的开始。
+OK
+127.0.0.1:6379> lpush czy ethan
+QUEUED
+127.0.0.1:6379> lpush czy iOS
+QUEUED
+127.0.0.1:6379> lpush czy c#
+QUEUED
+127.0.0.1:6379> exec //执行所有事务块内的命令。
+1) (integer) 1
+2) (integer) 2
+3) (integer) 3
+127.0.0.1:6379>
+
+取消事务：discard
+
+``
+```
+Redis 脚本：
+
+127.0.0.1:6379> EVAL "return {KEYS[1],KEYS[2],ARGV[1],ARGV[2]}" 2 key1 key2 first second
+1) "key1"
+2) "key2"
+3) "first"
+4) "second"
+127.0.0.1:6379>
+```
+```
+Redis 连接命令:
+
+1. 验证密码是否正确: auth password
+2. 打印字符串：echo message
+3. 查看服务是否运行：ping
+4.关闭当前连接：quit
+5.切换到指定的数据库：select index
+6.服务器信息：info (<a href="http://www.runoob.com/redis/redis-server.html">http://www.runoob.com/redis/redis-server.html</a>)
+```
+```
+Redis 数据备份与恢复:
+
+1.save:如果需要恢复数据，只需将备份文件 (dump.rdb) 移动到 redis 安装目录并启动服务即可
+2. 获取 redis 目录:config get dir
+3. bgsave:创建 redis 备份文件也可以使用命令 BGSAVE，该命令在后台执行
+```
+```
+Redis 安全
+
+1.查看是否设置了密码验证: config set requirepass password
+2.验证密码：auth ppassword
+3. 获取密码信息：config get requirepass
+
 ```
