@@ -3967,7 +3967,7 @@ return System.Text.RegularExpressions.Regex.IsMatch(str_url,
 
     }
 ```
-### <h4 id="Redis">Redis:一个开源的使用ANSI C语言编写、遵守BSD协议、支持网络、可基于内存亦可持久化的日志型、Key-Value数据库</h4>
+### <h4 id="Redis">28. Redis:一个开源的使用ANSI C语言编写、遵守BSD协议、支持网络、可基于内存亦可持久化的日志型、Key-Value数据库</h4>
 ```
 一个好用的Redis客户端工具：
 <a href="https://pan.baidu.com/s/1i4TOJU9">redisclient-win32.x86.1.5</a>
