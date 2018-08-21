@@ -1,0 +1,17 @@
+F:\csharpProj\RedisDemo\RedisDemo\bin\Debug\RedisDemo.exe.config
+F:\csharpProj\RedisDemo\RedisDemo\bin\Debug\RedisDemo.exe
+F:\csharpProj\RedisDemo\RedisDemo\bin\Debug\RedisDemo.pdb
+F:\csharpProj\RedisDemo\RedisDemo\bin\Debug\Newtonsoft.Json.dll
+F:\csharpProj\RedisDemo\RedisDemo\bin\Debug\Redis.dll
+F:\csharpProj\RedisDemo\RedisDemo\bin\Debug\ServiceStack.Common.dll
+F:\csharpProj\RedisDemo\RedisDemo\bin\Debug\ServiceStack.Interfaces.dll
+F:\csharpProj\RedisDemo\RedisDemo\bin\Debug\ServiceStack.Redis.dll
+F:\csharpProj\RedisDemo\RedisDemo\bin\Debug\ServiceStack.Text.dll
+F:\csharpProj\RedisDemo\RedisDemo\bin\Debug\Newtonsoft.Json.pdb
+F:\csharpProj\RedisDemo\RedisDemo\bin\Debug\Newtonsoft.Json.xml
+F:\csharpProj\RedisDemo\RedisDemo\bin\Debug\ServiceStack.Common.xml
+F:\csharpProj\RedisDemo\RedisDemo\bin\Debug\ServiceStack.Redis.xml
+F:\csharpProj\RedisDemo\RedisDemo\bin\Debug\ServiceStack.Text.xml
+F:\csharpProj\RedisDemo\RedisDemo\obj\Debug\RedisDemo.csprojResolveAssemblyReference.cache
+F:\csharpProj\RedisDemo\RedisDemo\obj\Debug\RedisDemo.exe
+F:\csharpProj\RedisDemo\RedisDemo\obj\Debug\RedisDemo.pdb
