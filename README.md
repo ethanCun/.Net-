@@ -4159,7 +4159,7 @@ Redis 安全
             //添加key-value
             client.Add<string>("timeout", "3秒之后消失", DateTime.Now.AddMilliseconds(3000));
             //休眠4s之后已经消失 有效时间为3s
-            Thread.Sleep(4);
+            Thread.Sleep(4000);
             Console.WriteLine("消失时间：{0}",client.Get<string>("timeout"));
             Console.WriteLine("是否存在:{0}", client.ContainsKey("timeout"));
             //移除key
