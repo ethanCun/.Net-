@@ -4157,7 +4157,9 @@ Redis 安全
             //AddMilliseconds:返回一个新的 System.DateTime，它将指定的毫秒数加到此实例的值上  时间：
             //过期时间
             //添加key-value
-            client.Add<string>("timeout", "30秒之后消失", DateTime.Now.AddMilliseconds(30000));
+            client.Add<string>("timeout", "3秒之后消失", DateTime.Now.AddMilliseconds(3000));
+            //休眠4s之后已经消失 有效时间为3s
+            Thread.Sleep(4);
             Console.WriteLine("消失时间：{0}",client.Get<string>("timeout"));
             Console.WriteLine("是否存在:{0}", client.ContainsKey("timeout"));
             //移除key
