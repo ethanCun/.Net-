@@ -4132,6 +4132,7 @@ Redis 安全
 3. 获取密码信息：config get requirepass
 
 ```
+### Redis在c#中的应用：在NuGet中引入Redis
 ```
  class Program
     {
